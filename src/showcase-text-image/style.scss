@@ -1,0 +1,108 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .wp-block-create-block-showcase-text-image-inner {
+  position:sticky;
+  position:-webkit-sticky;
+  top: 0;
+  overflow-x: hidden;
+  
+&:last-of-type {
+  position: relative !important;
+}
+
+
+  @media (min-width: 991px) {
+    min-height: 60vh;
+  }
+
+    .col-image {
+      -webkit-flex: 0;
+      flex: 0;
+      -webkit-flex-basis: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      background-position: 50%;
+      min-height: 250px;
+  
+      @media (min-width: 991px) {
+        -webkit-flex-basis: 55%;
+        flex-basis: 55%;
+        max-width: 55%;
+        min-height: 60vh;
+      }
+    }
+  
+    .col-text {
+      padding-bottom: 60px;
+      padding-top: 40px;
+      -webkit-flex: 0;
+      flex: 0;
+      -webkit-flex-basis: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-left: 7%;
+      padding-right: 7%;
+  
+      @media (min-width: 991px) {
+        -webkit-flex-basis: 45%;
+        flex-basis: 45%;
+        max-width: 45%;
+        padding-bottom: 140px;
+        padding-top: 124px;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .col-text-inner {
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+      p {
+        margin-bottom: 50px;
+      }
+
+
+      h2 {
+        font-size: 42px;
+        line-height: 46px;
+
+
+        @media (min-width: 991px) {
+          font-size: 58px;
+          line-height: 68px;
+        }
+      }
+
+    }
+
+    }
+
+
+  .sti-btn-wrap {
+    text-align: center;
+    display: block;
+
+    @media (min-width: 991px) {
+      text-align: left;
+    }
+
+  }
+
+  }
+
+  @media (max-width: 991px) {
+    .text-left-row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }

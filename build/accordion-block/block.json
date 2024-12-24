@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/accordion-block",
+  "version": "0.1.0",
+  "title": "Accordion Block",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "Accordion Block",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "blockID": {
+      "type": "string",
+      "default": ""
+    },
+    "initClosed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "accordion-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/content-carousel-stack-inner",
+  "parent": [
+    "create-block/content-carousel-stack"
+  ],
+  "version": "0.1.0",
+  "title": "Stacked Slide",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "btnLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "btnLink": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "mediaID": {
+      "type": "number",
+      "default": ""
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "content-carousel-stack-inner",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

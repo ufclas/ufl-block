@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/social-shell-insta",
+  "parent": [
+    "create-block/social-shell"
+  ],
+  "version": "0.1.0",
+  "title": "Social Shell Instagram",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaID": {
+      "type": "number",
+      "default": ""
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": ""
+    },
+    "slideLink": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "social-shell-insta",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

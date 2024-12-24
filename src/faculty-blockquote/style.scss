@@ -1,0 +1,102 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .blockquote-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    overflow-x: hidden;
+    position: relative;
+  
+    &:before,
+    &:after {
+      content: "";
+      border: 1px solid #fa4616;
+      position: absolute;
+      width: 90%;
+      height: 1px;
+      z-index: 99;
+  
+      @media (min-width: 800px) {
+        width: 50%;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+      }
+    }
+  
+    &::before {
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+  
+      @media (min-width: 800px) {
+        left: 8%;
+        right: unset;
+      }
+    }
+    &::after {
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      @media (min-width: 800px) {
+        right: 8%;
+        left: unset;
+      }
+    }
+  
+    .card {
+      border: none;
+      border-radius: 0;
+      max-width: 1200px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 38px 0;
+  
+      .blockquote {
+        display: flex;
+        margin-bottom: 0;
+  
+        @media (max-width: 800px) {
+          text-align: center;
+        }
+  
+        .quote {
+          font-size: 26px;
+          line-height: 48px;
+          text-align: center;
+          color: #0021a5;
+          font-family: "gentonamedium";
+  
+          @media (min-width: 800px) {
+            text-align: left;
+          }
+        }
+  
+        .quotee {
+          font-size: 19px;
+          line-height: 48px;
+          text-align: center;
+          color: #0021a5;
+          margin-left: 10px;
+          display: inline-block;
+  
+          @media (min-width: 800px) {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .faculty-blockquote-section {
+    .card {
+      background-color: transparent !important;
+      border: none !important;
+    }
+  }
+  

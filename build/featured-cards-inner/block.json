@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/featured-cards-inner",
+  "parent": [
+    "create-block/featured-cards"
+  ],
+  "version": "0.1.0",
+  "title": "Featured Card",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "btnLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "btnLink": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "mediaID": {
+      "type": "number",
+      "default": ""
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "featured-cards-inner",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

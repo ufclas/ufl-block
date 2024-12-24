@@ -1,0 +1,192 @@
+.featured-card-section {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  
+  
+    @media (min-width: 1024px) {
+      padding-top: 80px;
+      padding-bottom: 50px;
+    }
+  
+    .featured-card-container {
+      justify-content: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+  
+      .featured-card {
+        position: relative;
+        padding: 28px 20px 10px 20px;
+        width: 100%;
+        height: inherit !important;
+        text-decoration: none;
+        border-radius: 0;
+        margin-bottom: 30px;
+        display: inline-block;
+        height: inherit !important;
+        -webkit-flex: 1 1 0;
+        flex: 1 1 0;
+        margin-right: 0;
+  
+  
+  
+    @media (min-width: 1024px) {
+      padding: 48px 20px 42px 20px;
+    }
+  
+        &:nth-last-child(1) {
+          margin-right: 0px;
+        }
+  
+        &:hover,
+        &:focus {
+          .animated-underline-button {
+            color: #313535 !important;
+            &::after {
+              width: 26px;
+            }
+          }
+        }
+  
+        @media (min-width: 1024px) {
+          margin-right: 52px;
+          max-width: 500px;
+        }
+  
+        .featured-card-inner {
+          @media (max-width: 1024px) {
+            max-width: 510px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+  
+        .image-box {
+          max-width: 510px;
+          max-height: 450px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 37px;
+          overflow: hidden;
+          position: relative;
+          display: block;
+  
+          .featured-card-image {
+            width: 100%;
+            transition: all 0.3s;
+            display: block;
+            height: auto;
+          }
+        }
+        .featured-card-title {
+          color: #000;
+          font-family: "gentonasemibold";
+          line-height: 40px;
+          font-size: 24px;
+        }
+  
+        .featured-card-text {
+          font-size: 21px;
+          letter-spacing: -0.01em;
+          line-height: 38px;
+          color: #000;
+          margin-bottom: 25px;
+          font-family: "gentonabook";
+          display: block;
+        }
+  
+        .animBottom,
+        .animTop {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-size: 100% 10px;
+          z-index: -1;
+          max-width: 150px;
+          display: none;
+          pointer-events: none;
+  
+          @media (min-width: 1024px) {
+            display: block;
+          }
+        }
+        .animTop {
+          left: -100px !important;
+          top: 65px;
+        }
+        .animbottomLeft {
+          left: -100px !important;
+          top: -65px;
+        }
+        .animBottom {
+          right: -100px;
+          bottom: 65px;
+        }
+      }
+  
+      .slick-list {
+        @media (min-width: 1024px) {
+          overflow: visible;
+        }
+      }
+      .slick-track {
+        @media (min-width: 1024px) {
+          display: flex !important;
+          justify-content: center;
+          justify-content: center;
+          align-items: stretch;
+          align-content: stretch;
+          overflow: visible;
+        }
+      }
+  
+      .slick-arrow {
+        bottom: 0px;
+        top: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-right: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+        gap: 12px;
+        background: none !important;
+        color: #fa4616 !important;
+        font-size: 62px;
+        line-height: 2;
+        border-radius: 0;
+        justify-content: center;
+        overflow: visible;
+        font-family: "gentonabook";
+        padding-left: 0;
+        padding-right: 0;
+        min-width: 65px;
+        max-height: 125px;
+        position: absolute;
+        z-index: 9999;
+  
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+  
+      span {
+        overflow: visible;
+      }
+      .cto-next {
+        right: 0px;
+      }
+      .cto-prev {
+        left: 0px;
+      }
+      .slick-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+  

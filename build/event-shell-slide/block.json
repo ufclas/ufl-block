@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/event-shell-slide",
+  "parent": [
+    "create-block/event-shell-slider"
+  ],
+  "version": "0.1.0",
+  "title": "Event Shell Event",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "date": {
+      "type": "string",
+      "selector": ".date",
+      "default": ""
+    },
+    "time": {
+      "type": "string",
+      "selector": ".time",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "selector": "h3",
+      "default": ""
+    },
+    "subText": {
+      "type": "string",
+      "selector": ".event-subtext",
+      "default": ""
+    },
+    "slideLink": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "event-shell-slide",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

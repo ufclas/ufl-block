@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/image-gallery-slide",
+  "parent": [
+    "create-block/image-gallery"
+  ],
+  "version": "0.1.0",
+  "title": "Image Gallery Slide",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "blockID": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "image-gallery-slide",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

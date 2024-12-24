@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/slider-manual",
+  "version": "0.1.0",
+  "title": "Slider - Manual",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "College News"
+    },
+    "link": {
+      "type": "string",
+      "default": ""
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "Link Text"
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "slider-manual",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

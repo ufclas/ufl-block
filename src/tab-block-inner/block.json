@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tab-block-inner",
+	"parent": [ "create-block/tab-block" ],
+	"version": "0.1.0",
+	"title": "Tab Item",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "",
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"buttonLabel": {
+			"type": "string",
+			"default": "Add Text"
+		},
+		"buttonLink": {
+			"type": "string",
+			"default": ""
+		},
+		"hasLinkNofollow": {
+			"type": "boolean",
+			"default": false
+		},
+		"openNewTab": {
+			"type": "boolean",
+			"default": false
+		},
+		"blockID": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "tab-block-inner",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

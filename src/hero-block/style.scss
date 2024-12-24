@@ -1,0 +1,458 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+ 
+ .wp-block-create-block-hero-block  {
+  overflow-x: hidden;
+
+  .hero-wrapper {
+	  height: calc(100vh - 146px);
+	  overflow: hidden;
+	  background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.4) 0%,
+		rgba(0, 33, 165, 0) 30%,
+		rgba(0, 0, 0, 0) 30%,
+		rgba(0, 0, 0, 0.9) 100%
+	  );
+	  position: relative;
+  
+  
+	  &:before {
+		  content: "";
+		  left: 0;
+		  position: absolute;
+		  width: 100%;
+		  height: 15px;
+		  background: linear-gradient(rgba(0, 28, 139, 0.2) 30%, rgba(0, 17, 83, 0) 100%);
+		  z-index: 1;
+		  mix-blend-mode: multiply;
+	  }
+	
+	  .hero-bg-img {
+		//background-image: url(../img/jane-dean.webp);
+		mix-blend-mode: multiply;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-position: 70%;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+	  }
+	
+	  .hero-object-wrapper {
+		position: relative;
+		#object1 {
+		  position: absolute;
+		  right: 4.2%;
+		  z-index: 3;
+		  top: 120px
+		}
+		#object2 {
+		  position: absolute;
+		  right: 3.7%;
+		  z-index: 3;
+		  top: 120px;
+		}
+	  }
+	
+	  .banner_subtitle p {
+		font-size: 18px;
+		letter-spacing: 0.03em;
+		text-align: left;
+		color: #fff;
+		text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
+		margin-bottom: 25px;
+		font-family: "gentonabook";
+		text-transform: uppercase;
+	
+		@media (min-width: 768px) {
+		  font-size: 18px;
+		}
+	  }
+	
+	  .banner_title {
+		-webkit-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+	
+		h1 {
+		  font-size: 34px;
+		  line-height: 28px;
+		  color: #fff;
+		  text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
+		  position: relative;
+		  transition: all 0.25s ease-in-out;
+		  font-family: "gentonabbitalic";
+		  margin-bottom: 30px;
+	
+		  &:after {
+			content: "";
+			background: url('../../assets/images/hero-down-chevron.png') no-repeat center center;
+			width: 32px;
+			height: 15px;
+			display: inline-block;
+			position: absolute;
+			bottom: -40px;
+			left: 70px;
+			transition: all 0.25s ease-in-out;
+		  }
+	
+		  @media (min-width: 768px) {
+			font-size: 72px;
+			line-height: 54px;
+		  }
+		}
+	
+		.hero-excerpt-btn-wrapper {
+		  position: relative;
+	
+		  .button {
+			position: absolute;
+			right: -170px;
+			opacity: 0;
+			min-width: 195px;
+	
+			@media (max-width: 1200px) {
+			  font-size: 22px;
+			}
+		  }
+		}
+	  }
+	
+	  .hero__excerpt {
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		color: #fff;
+  
+		font-family: "gentonabook";
+		line-height: 24px;
+		font-size: 18px;
+  
+		@media (min-width: 768px) {
+		  font-size: 20px;
+		  max-width: 80%;
+		}
+	  }
+	  .hero__text:hover h1:after,
+	  .hero_text_hover h1:after {
+		opacity: 0;
+	  }
+	
+	  .hero__text:hover .hero__excerpt,
+	  .hero_text_hover .hero__excerpt {
+		opacity: 1;
+		//height: 100%;
+		visibility: visible;
+		-webkit-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+	  }
+	
+	  .hero__text:hover .banner_title,
+	  .hero_text_hover .banner_title {
+		padding-bottom: 100px;
+	  }
+	
+	  .hero__text:hover .button,
+	  .hero_text_hover .button {
+		opacity: 1 !important;
+	  }
+	
+	  .hero__text {
+		-webkit-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		position: absolute !important;
+		bottom: 0;
+		max-width: calc(80% + 100px) !important;
+		padding-right: 210px;
+		padding-left: 90px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+	  }
+	  .hero__text:before {
+		content: "";
+		width: 2px;
+		height: 80%;
+		background: #fa4616;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 20%;
+	  }
+	  .hero__text:after {
+		content: "";
+		width: 2px;
+		height: 30%;
+		background: #fa4616;
+		display: inline-block;
+		position: absolute;
+		right: -20px;
+		top: 70%;
+	  }
+	}
+	
+	@media (max-width: 900px) {
+	  .hero-object-wrapper,
+	  .hero-wrapper .hero__text:before {
+		display: none;
+	  }
+	
+	  .hero-excerpt-btn-wrapper {
+		flex-direction: column;
+		-webkit-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		max-height: 0;
+	
+		.button {
+		  position: relative !important;
+		  right: unset !important;
+		  display: inline-block;
+		  bottom: 10px;
+		  margin-bottom: 20px;
+		}
+		.hero__excerpt {
+		  margin-bottom: 40px;
+		  height: 100%;
+		}
+	  }
+	  .banner_title {
+		padding-bottom: 20px !important;
+	  }
+	  .hero__text {
+		padding-left: 30px !important;
+		padding-right: 30px !important;
+	  }
+	  .hero-text-hover:hover,
+	  .hero_text_hover {
+		padding-bottom: 30px;
+	  }
+	
+	  .hero__text:hover .hero-excerpt-btn-wrapper {
+		max-height: 600px;
+	  }
+	}
+  
+  }
+
+
+
+  .hero-split-container {
+    overflow: hidden;
+    position: relative;
+
+
+    &:before {
+        content: "";
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        background: linear-gradient(rgba(0, 28, 139, 0.2) 30%, rgba(0, 17, 83, 0) 100%);
+        z-index: 1;
+        mix-blend-mode: multiply;
+    }
+
+    .hero-split-wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: stretch;
+      align-content: stretch;
+      position: relative;
+      background-color: #343741;
+
+
+      @media (min-width: 1050px) {
+        flex-direction: row;
+      }
+      
+
+      .split-hero-content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: #343741;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 7%;
+        padding-bottom: 6%;
+
+
+
+        @media (min-width: 1050px) {
+          padding-right: 2%;
+          max-width: 700px;
+          min-width: 500px;
+        }
+
+        .split-hero-content-wrapper {
+
+          margin: auto;
+          @media (min-width: 1050px) {
+            max-width: 420px;
+          }
+        }
+      }
+
+      .hero-bg-img {
+        position: relative;
+        background-position: 50%;
+        background-size: cover;
+        width: 100%;
+        min-height: 350px;
+      }
+
+      .hero-object-wrapper {
+        position: relative;
+        #object1 {
+          position: absolute;
+          right: 4.2%;
+          z-index: 3;
+        }
+        #object2 {
+          position: absolute;
+          right: 3.7%;
+          z-index: 3;
+        }
+      }
+
+    }
+
+
+    .banner_subtitle p {
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
+      margin-bottom: 25px;
+      font-family: "gentonabook";
+      text-transform: uppercase;
+  
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  
+    .banner_title {
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+  
+      h1 {
+        font-size: 30px;
+        line-height: 28px;
+        color: #fff;
+        text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
+        position: relative;
+        transition: all 0.25s ease-in-out;
+        font-family: "gentonabbitalic";
+  
+        @media (min-width: 768px) {
+          font-size: 64px;
+          line-height: 72px;
+        }
+      }
+    }
+
+    .hero__excerpt {
+      line-height: 30px;
+      text-align: left;
+      color: #f4f6f6;
+      margin-bottom: 30px;
+      font-size: 20px;
+
+      @media (min-width: 768px) {
+        font-size: 24px;
+        margin-bottom: 60px;
+      }
+    }
+}
+
+
+
+
+
+   .editor-styles-wrapper .animated-border-button {
+    background: transparent;
+   }
+
+
+
+
+   .hero-container-video {
+
+	#hero-video {
+	  pointer-events: none;
+	  width: 100%;
+	  height: 100%;
+	  object-position: center;
+	  object-fit: cover;
+	}
+  
+	.banner-video-controls {
+	  position: absolute;
+	  z-index: 99999999;
+	  top: 6rem;
+	  right: 2rem;
+  
+	  @media (min-width: 768px) {
+		top: 10rem;
+		right: 8rem;
+	  }
+  
+  
+  
+	  .icon-button {
+		opacity: 0;
+		-webkit-transition: all .3s ease-in;
+		-moz-transition: all .3s ease-in;
+		-o-transition: all .3s ease-in;
+		-ms-transition: all .3s ease-in;
+		transition: all .3s ease-in;
+		border: none;
+	  border-radius: 50%;
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  -o-border-radius: 50%;
+	  background-color: rgba(255, 255, 255, 0.2);
+	  font-size: 1rem;
+	  padding: 1rem;
+	  width: calc(3rem - 2px);
+	  height: calc(3rem - 2px);
+	  line-height: 0;
+	  color: #fff;
+	  z-index: 10;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  text-decoration: none;
+	  -webkit-appearance: none;
+	  appearance: none;
+	  cursor: pointer;
+	  &:hover, &:focus {
+		background-color: #0021a5;
+	  }
+	  path {
+		fill:#fff;
+	  }
+	}
+  }
+  }

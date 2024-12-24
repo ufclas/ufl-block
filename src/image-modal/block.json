@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/image-modal",
+	"parent": [ "create-block/image-gallery-slide" ],
+	"version": "0.1.0",
+	"title": "Image Modal",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": "h2",
+			"default": "Title"
+		},
+		"content": {
+			"type": "string",
+			"selector": "p",
+			"default": ""
+		},
+		"blockID": {
+			"type": "string",
+			"default": ""
+		},
+		"modalTarget": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaID": {
+			"type": "number",
+			"default": ""
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": "/wp-content/plugins/ufl-block/assets/images/modal-image-ph.webp"
+		}
+	},
+	"textdomain": "image-modal",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,104 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ 
+ .wp-block-create-block-showcase-text-only {
+    background-color: #f4f6f6;
+    overflow-x: hidden;
+    padding: 6% 7% 7%;
+	color: #000;
+	
+    @media (min-width: 800px) {
+      padding: 112px 7% 100px;
+    }
+  
+    h2 {
+      font-size: 30px;
+      line-height: 44px;
+      font-family: "gentonalight", Arial, sans-serif;
+  
+      @media (min-width: 800px) {
+        margin-bottom: 40px;
+        font-size: 62px;
+        line-height: 68px;
+      }
+    }
+  
+    p {
+      font-family: "gentonalight", Arial, sans-serif;
+      color: #000;
+      font-size: 17px;
+      line-height: 24px;
+      margin-bottom: 60px;
+      text-align: center;
+      margin-bottom: 36px;
+  
+      @media (min-width: 800px) {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 60px;
+      }
+    }
+  
+    .button-text-dark {
+      &:hover,
+      &:focus {
+        background-color: #fff !important;
+      }
+    }
+
+
+    .animated-border-button {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-top-width: 0;
+      border-bottom-width: 0;
+      border-style: solid;
+      padding: 15px 43px;
+      position: relative;
+      font-size: 26px;
+      font-family: "gentonasemibold", Arial, sans-serif;
+      text-align: center;
+      user-select: none;
+      vertical-align: middle;
+      white-space: normal;
+      display: inline-flex;
+      cursor: pointer;
+    
+      @media (max-width: 767px) {
+        font-size: 20px;
+      }
+    
+      &:before {
+        content: "";
+        transition: all 0.3s;
+        height: 0;
+        position: absolute;
+        width: 87%;
+      }
+      &:after {
+        content: "";
+        transition: all 0.3s;
+        height: 0;
+        position: absolute;
+        width: 87%;
+      }
+      &:hover,
+      &:focus {
+        &::before {
+          width: 100%;
+        }
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    
+
+  }
+  

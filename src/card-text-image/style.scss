@@ -1,0 +1,105 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+ .wp-block-create-block-card-text-image {
+    padding: 45px 7% 40px 7%;
+    overflow-x: hidden;
+  
+    @media (min-width: 800px) {
+      padding: 80px 7% 75px 7%
+    }
+  
+    .cards-text-image-inner-wrapper {
+      max-width: 1700px;
+      margin-left: auto;
+      margin-right: auto;
+  
+      .col-wrapper {
+        row-gap: 35px;
+        column-gap: 54px;
+        display: flex;
+        align-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        flex-direction: column;
+  
+        @media (min-width: 800px) {
+          flex-direction: row;
+        }
+  
+        .col-cti {
+          display: block;
+          flex-direction: column;
+          align-content: stretch;
+          justify-content: space-between;
+          align-items: center;
+          -webkit-flex: 1 1 0;
+          flex: 1 1 0;
+          max-width: 100%;
+          width: 100%;
+  
+          @media (min-width: 800px) {
+            max-width: none;
+            width: auto;
+            display: flex;
+          }
+  
+          .image-box {
+            max-width: 510px;
+            max-height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 37px;
+            overflow: hidden;
+            position: relative;
+  
+            .card-image {
+              width: 100%;
+              transition: all 0.3s;
+              display: block;
+              height: auto;
+            }
+          }
+          .card-text {
+            font-size: 21px;
+            letter-spacing: -0.01em;
+            line-height: 38px;
+            text-align: center;
+            color: #000;
+            max-width: 435px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+            font-family: "gentonabook";
+          }
+        }
+      }
+    }
+  }
+  
+
+  .editor-styles-wrapper .cards-text-image-inner-wrapper .col-wrapper .block-editor-block-list__layout {
+    display: flex !important;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+  }
+
+
+  .editor-styles-wrapper .wp-block-create-block-card-text-image-inner {
+
+
+    @media (min-width: 800px) {
+      max-width: 30% !important;
+    }
+
+
+}

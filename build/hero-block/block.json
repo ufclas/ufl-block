@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/hero-block",
+  "version": "0.1.0",
+  "title": "Hero",
+  "icon": "index-card",
+  "category": "theme",
+  "attributes": {
+    "pretitle": {
+      "type": "string",
+      "selector": ".banner_subtitle_text",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "selector": "h1",
+      "default": ""
+    },
+    "mediaID": {
+      "type": "number",
+      "default": ""
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": ""
+    },
+    "movieID": {
+      "type": "number",
+      "default": ""
+    },
+    "movieURL": {
+      "type": "string",
+      "default": ""
+    },
+    "hero_excerpt": {
+      "type": "string",
+      "selector": ".hero__excerpt",
+      "default": ""
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "animated_border_button": {
+      "type": "string",
+      "selector": ".animated-border-button",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "heroSplit": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "hero-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

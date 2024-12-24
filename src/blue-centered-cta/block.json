@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/blue-centered-cta",
+	"version": "0.1.0",
+	"title": "Blue Centered CTA",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "Blue Centered CTA Block",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": "h2",
+			"default": ""
+		},
+		"content": {
+			"type": "string",
+			"selector": "p",
+			"default": ""
+		},		
+		"linkLabel": {
+			"type": "string",
+			"default": ""
+		},		
+		"link": {
+			"type": "string",
+			"selector": ".animated-border-button",
+			"default": ""
+		},
+		"hasLinkNofollow": {
+			"type": "boolean",
+			"default": false
+		},
+		"openNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "blue-centered-cta",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

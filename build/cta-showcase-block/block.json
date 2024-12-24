@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/cta-showcase",
+  "version": "0.1.0",
+  "title": "Cta Showcase",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": "h2",
+      "default": "Title"
+    },
+    "subTitle": {
+      "type": "string",
+      "selector": "p",
+      "default": "Sub-text"
+    }
+  },
+  "textdomain": "cta-showcase",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

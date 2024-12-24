@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/card-text-image",
+  "version": "0.1.0",
+  "title": "Card Text Image",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "Card Text Image Block",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": "h2",
+      "default": ""
+    }
+  },
+  "textdomain": "content-carousel",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

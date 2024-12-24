@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/announcements-showcase",
+  "version": "0.1.0",
+  "title": "Announcements Showcase",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "Announcements Showcase Block",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": "h2",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "selector": "p",
+      "default": ""
+    },
+    "link": {
+      "type": "string",
+      "selector": ".animated-underline-button",
+      "default": ""
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "announcements-showcase",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

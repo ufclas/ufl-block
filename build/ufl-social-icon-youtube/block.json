@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/ufl-social-icon-youtube",
+  "parent": [
+    "create-block/ufl-social-buttons"
+  ],
+  "version": "0.1.0",
+  "title": "UFL Social Icon Youtube",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "slideLink": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "iconColor": {
+      "type": "string",
+      "default": "#0021A5"
+    },
+    "backgroundHoverColor": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "iconHoverColor": {
+      "type": "string",
+      "default": "#0021A5"
+    },
+    "blockID": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "ufl-social-icon-youtube",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,79 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+
+ .date-share-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(1074px + 14%);
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 36px;
+    padding-right: 7%;
+    padding-bottom: 36px;
+    padding-left: 7%;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 800px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .single-social-share {
+      font-size: 20px;
+      line-height: 28px;
+      text-align: left;
+      color: #0021a5;
+
+      .social-column-grey {
+        gap: 10px;
+      }
+
+      span {
+        margin-right: 4%;
+      }
+      @media only screen and (min-width: 1555px) {
+        margin-right: -200px;
+      }
+    }
+  }
+
+
+  .single-news-highlight {
+    max-width: 1074px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(14% + 1074px);
+    padding: 0 7%;
+
+    p {
+      font-size: 26px;
+      line-height: 48px;
+      font-size: 22px;
+      line-height: 34px;
+      color: #343741;
+      font-family: "gentonamedium";
+
+      @media only screen and (min-width: 800px) {
+        font-size: 22px;
+        line-height: 34px;
+      }
+    }
+
+    hr {
+      border-bottom: 1px solid #fa4616;
+      border-top: none;
+      margin: 0;
+      opacity: 1;
+    }
+  }

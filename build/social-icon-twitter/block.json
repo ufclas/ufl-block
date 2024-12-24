@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/social-icon-twitter",
+  "parent": [
+    "create-block/social-buttons"
+  ],
+  "version": "0.1.0",
+  "title": "Social Icon Twitter",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "slideLink": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "social-icon-twitter",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

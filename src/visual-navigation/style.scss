@@ -1,0 +1,101 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ .visual-navigation {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 55px;
+  padding-bottom: 45px;
+
+  @media (min-width: 800px) {
+    padding-top: 120px;
+    padding-bottom: 65px;
+  }
+
+  .visual-navigation-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+    max-width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+    .visual-navigation-intro {
+      margin-bottom: 20px;
+
+      @media (min-width: 800px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .visual-navigation-link {
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 35px;
+
+      p {
+        background-color: #fff;
+        position: relative;
+        font-family: "gentonasemibold";
+        padding-top: 30px;
+        z-index: 99999999;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+      }
+
+      &:hover,
+      &:focus {
+        .visual-navigation-image-wrapper::after {
+          transform: translateY(0%);
+        }
+      }
+
+      .visual-navigation-image-wrapper {
+        position: relative;
+        display: block;
+        overflow: hidden;
+
+        .visual-navigation-image {
+          width: 100%;
+          aspect-ratio: 1.13/1;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  .dh-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dh-overlay {
+    position: absolute;
+    top: -100%;
+  }
+
+  .dh-overlay {
+    background-color: #fa4616;
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 300px;
+    color: #fff;
+  }
+}
+
+
+
+.editor-styles-wrapper .visual-navigation-wrapper .block-editor-block-list__layout {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 20px;
+}

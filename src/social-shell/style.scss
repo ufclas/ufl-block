@@ -1,0 +1,125 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .social-media-shell-wrapper {
+  background-color: #f4f6f6;
+  padding: 0 5% 8%;
+  overflow-x: hidden;
+
+
+
+  .soc-container {
+    margin-bottom: 20px;
+
+    @media (max-width: 380px) {
+      width: 100% !important;
+    }
+  }
+
+  .social-media-shell-title {
+    color: #0021a5;;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    line-height: 72px;
+    text-align: center;
+    color: #0021a5;;
+  }
+
+  .social-item {
+    background-color: #0021a5;
+    color: #ffffff !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+  }
+  .social-item:hover,
+  .social-item:focus {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+  .social-icon .social-handle {
+    font-size: 17px;
+  }
+  .social-item,
+  .social-item .social-text {
+    transition: all 0.3s ease-in-out;
+  }
+  .social-item.social-overlay .social-text {
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+  }
+  .social-item .social-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    font-size: 17px;
+    font-family: "gentonalight", Arial, sans-serif;
+    height: 100%;
+
+
+    @media only screen and (max-width: 1399px) and (min-width: 1200px) {
+      padding: 20px;
+    }
+
+
+  }
+  .social-item:hover .social-text,
+  .social-item:focus .social-text {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(52, 55, 65, 0.9);
+  }
+  .social-item .social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 20px;
+  }
+  .social-icon i {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+  }
+
+  @media (min-width: 1200px) {
+    .col-xl-3 {
+        flex: 0 0 auto;
+        width: 25%
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+.social-item {
+    height:275px;
+}
+
+.social-item .social-text {
+    height: 100%
+}
+}
+
+@media only screen and (min-width: 993px) {
+.social-item {
+    height:370px
+}
+}
+
+.editor-styles-wrapper .social-feed .block-editor-block-list__layout {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 20px;
+}

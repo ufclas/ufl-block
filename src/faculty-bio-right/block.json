@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/faculty-bio-right",
+	"parent": [ "create-block/faculty-bio" ],
+	"version": "0.1.0",
+	"title": "Faculty Bio Right",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "Optional Title"
+		}, 
+		"sectionsubtitle": {
+			"type": "string",
+			"default": "Optional Title"
+		}
+	},
+	"textdomain": "faculty-bio-right",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
+
+

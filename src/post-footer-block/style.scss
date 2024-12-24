@@ -1,0 +1,66 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+ .single-news-footer-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(14% + 1074px);
+    padding-left: 7%;
+    padding-right: 7%;
+
+    .single-news-footer {
+      padding: 30px 0 44px;
+      border-top: 1px solid #fa4616;
+
+      .single-news-meta {
+        column-gap: 20px;
+        row-gap: 10px;
+        flex-direction: column;
+
+        @media only screen and (min-width: 800px) {
+          flex-direction: row;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 28px;
+          color: #000;
+          margin-bottom: 0;
+
+          @media only screen and (min-width: 800px) {
+            font-size: 20px;
+          }
+        }
+
+        a {
+          color: #0021a5;
+          font-size: 18px;
+          line-height: 28px;
+          text-decoration: none;
+          font-family: "gentonamedium";
+
+          @media only screen and (min-width: 800px) {
+            font-size: 20px;
+          }
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+
+        span {
+          display: none;
+
+          @media only screen and (min-width: 800px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }

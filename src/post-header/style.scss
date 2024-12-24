@@ -1,0 +1,111 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+
+ .single-news-hero {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 55px;
+    min-height: 85vh;
+
+    &:after {
+      content: "";
+      background: linear-gradient(to top, #343741 0%, rgba(0, 17, 83, 0) 100%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 6;
+      mix-blend-mode: multiply;
+    }
+
+    h1 {
+      text-align: left;
+      color: #fff !important;
+      text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
+      font-family: "gentonasemibold";
+      position: relative;
+      z-index: 9999;
+      max-width: calc(14% + 1074px);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10% 7% 55px;
+      font-size: 32px;
+      line-height: 46px;
+
+      @media only screen and (min-width: 800px) {
+        font-size: 48px;
+        line-height: 56px;
+      }
+    }
+  }
+
+  .title-block {
+    background-color: #F4F6F6;
+    overflow-x: hidden;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 36px;
+  
+  
+    @media (min-width: 800px) {
+        padding-bottom: 72px;
+    }
+    
+    .page-title-container {
+        padding-top: 20px;
+
+        @media (min-width: 800px) {
+          padding-top: 40px;
+      }
+  
+        .title-wrapper {
+            text-align: center;
+            max-width: 1074px;
+            margin-left: auto;
+            margin-right: auto;
+  
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #000;
+                margin-bottom: 20px;
+            }
+            hr {
+                border-top: 2px solid #FA4616;
+                opacity: 1;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            p {
+                line-height: 30px;
+                text-align: center;
+                color: #000;
+                max-width: 980px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+                margin-bottom: 0;
+                
+                @media (min-width: 800px) {
+                    font-size: 24px;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+  }
+
+.wp-block-create-block-post-header .title-wrapper {
+    padding-top: 75px;
+}

@@ -1,0 +1,75 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .editor-styles-wrapper .wp-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+ .wp-block-create-block-factoids {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    max-width: calc(1640px + 5%);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+    overflow-x: hidden;
+  
+    @media (min-width: 900px) {
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+    }
+  
+    .factoid-col {
+      margin-bottom: 30px;
+  
+      .factoid-number {
+        font-size: 40px;
+        line-height: 60px;
+        color: #0021a5;
+        border-bottom: 2px dotted #fa4616;
+        font-family: "gentonabookbold", Arial, sans-serif;
+  
+        @media (min-width: 900px) {
+          line-height: 60px !important;
+          font-size: 60px;
+          padding-bottom: 32px;
+        }
+      }
+  
+      .factoid-subhead {
+        color: #0021a5;
+        font-size: 22px;
+        line-height: 28px;
+        font-family: "gentonasemibold";
+        font-weight: bold;
+        text-align: center;
+  
+        @media (min-width: 900px) {
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+  
+      .factoid-subtext {
+        color: #000;
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 395px;
+        margin-left: auto;
+        margin-right: auto;
+  
+        @media (min-width: 900px) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  

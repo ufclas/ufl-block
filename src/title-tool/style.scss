@@ -1,0 +1,317 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+ 
+
+ .title-tool-block, .wp-block-create-block-title-tool {
+	position: relative;
+	overflow: hidden;
+  
+	.title-tool-block-bg {
+	  position: relative;
+	  width: 100%;
+	  height: 100%;
+	  background-position: 50%;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  min-height: 300px;
+  
+	  @media (min-width: 767px) {
+		position: absolute;
+		width: 100%;
+		animation: move 40s ease;
+		/* Add infinite to loop. */
+		-ms-animation: move 40s ease;
+		-webkit-animation: move 40s ease;
+		-moz-animation: move 40s ease;
+		transform: scale(1);
+		-ms-transform: scale(1);
+		/* IE 9 */
+		-webkit-transform: scale(1);
+		/* Safari and Chrome */
+		-o-transform: scale(1);
+		/* Opera */
+		-moz-transform: scale(1);
+		/* Firefox */
+	  }
+  
+	  &:after {
+		background: linear-gradient(
+		  180deg,
+		  rgba(0, 0, 0, 0.5) 0%,
+		  rgba(0, 0, 0, 0) 100%
+		);
+		top: 0;
+		content: "";
+		z-index: 99;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	  }
+	}
+
+  }
+  
+
+  .title-tool-block-inner {
+	position: relative;
+	z-index: 999;
+
+	@media (min-width: 767px) {
+	  padding: 100px 7% 60px;
+	  text-align: center;
+	}
+
+	.title-tool-title {
+		h1 {
+			margin: 0;
+			font-family: "gentonamedium", Arial, sans-serif;
+			letter-spacing: 0.2em;
+			text-align: center;
+			padding-top: 30px;
+	
+			@media (min-width: 767px) {
+			  color: #fff;
+			  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
+			  padding-top: 0;
+			  font-size: 48px;
+			  line-height: 54px;
+			}
+		  }
+	  hr {
+		max-width: 682px;
+		border-top: #fa4616 2px solid;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		opacity: 1;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+      p {
+        margin: 0;
+        font-family: "gentonabook";
+        max-width: 1000px;
+		text-align: center;
+
+        @media (min-width: 767px) {
+          color: #fff;
+          margin: 40px auto 85px;
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+
+	  @media (max-width: 768px) {
+		padding: 0 7% 20px;
+		background-color: #fff;
+	  }
+	}
+
+	.tool-link-wrapper {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: wrap;
+	  justify-content: space-evenly;
+	  min-height: 1em;
+	  position: relative;
+	  background-color: #fff;
+
+	  @media (min-width: 767px) {
+		flex-direction: row;
+		background-color: transparent;
+		gap: 10px;
+		max-width: 1304px;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+
+	  .tool-link {
+		position: relative;
+		border: 3px solid rgba(255, 255, 255, 0.85);
+		background-color: rgba(255, 255, 255, 0.85);
+		padding: 5px 3.5%;
+		display: flex;
+		text-decoration: none;
+		min-width: 205px;
+		width: 100%;
+		gap: 20px;
+		align-items: center;
+		-webkit-flex: 1 1 0;
+    flex: 0 1 0;
+
+		@media (min-width: 767px) {
+		padding: 30px 3.5%;
+		  max-width: 285px;
+		  padding: 15px;
+		  flex-direction: column;
+		  text-align: center;
+		  gap: 0;
+		}
+
+		&:hover,
+		&:focus {
+		  border: 3px solid #fa4616;
+		  background-color: rgba(255, 255, 255, 1);
+		}
+
+        .figure {
+			margin-bottom: 30px;
+			width: 100%;
+			max-width: 70px;
+			max-height: 70px;
+  
+			@media (min-width: 767px) {
+			  max-width: 90px;
+			  max-height: 90px;
+			}
+  
+			.figure-img {
+			  object-fit: contain;
+			  max-width: 70px;
+			  max-height: 70px;
+			  width: 100%;
+			  height: auto;
+  
+			  @media (min-width: 767px) {
+				height: 90px;
+				width: 90px;
+			  }
+			}
+		  }
+
+		  h2 {
+			font-family: "gentonasemibold";
+			font-size: 24px;
+			line-height: 28px;
+			font-weight: 700;
+			margin-bottom: 20px;
+  
+			@media (max-width: 767px) {
+			  font-size: 22px;
+			  line-height: 22px;
+			}
+		  
+		  }
+
+		  p {
+			line-height: 22px;
+			font-weight: 600;
+		  }
+	  }
+	}
+  }
+
+
+
+  @keyframes move {
+	0% {
+	  -webkit-transform-origin: bottom left;
+	  -moz-transform-origin: bottom left;
+	  -ms-transform-origin: bottom left;
+	  -o-transform-origin: bottom left;
+	  transform-origin: bottom left;
+	  transform: scale(1.2);
+	  -ms-transform: scale(1.2);
+	  /* IE 9 */
+  
+	  -webkit-transform: scale(1.2);
+	  /* Safari and Chrome */
+  
+	  -o-transform: scale(1.2);
+	  /* Opera */
+  
+	  -moz-transform: scale(1.2);
+	  /* Firefox */
+	}
+	100% {
+	  transform: scale(1);
+	  -ms-transform: scale(1);
+	  /* IE 9 */
+  
+	  -webkit-transform: scale(1);
+	  /* Safari and Chrome */
+  
+	  -o-transform: scale(1);
+	  /* Opera */
+  
+	  -moz-transform: scale(1);
+	  /* Firefox */
+	}
+  }
+  
+
+
+  .editor-styles-wrapper .title-tool-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.editor-styles-wrapper .title-tool-bg:after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    top: 0;
+    content: "";
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.editor-styles-wrapper  .title-tool-title {
+	position: relative;
+	color: #fff;
+	padding-top: 60px;
+	text-align: center;
+}
+
+.editor-styles-wrapper  .title-tool-title h1, .editor-styles-wrapper  .title-tool-title p {
+	position: relative;
+	color: #fff;
+	text-align: center;
+}
+
+
+.editor-styles-wrapper .tool-link {
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    text-decoration: none;
+    min-width: 205px;
+    flex: 1 1 auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+	flex: 0;
+}
+
+
+.editor-styles-wrapper .tool-link h2 {
+    font-size: 24px !important;
+}
+   
+   
+   .editor-styles-wrapper .tool-link-wrapper .block-editor-block-list__layout {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 10px;
+   }

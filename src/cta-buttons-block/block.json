@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/cta-button-block",
+	"parent": [ "create-block/cta-showcase" ],
+	"version": "0.1.0",
+	"title": "CTA Button Block",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"ctaTitle": {
+			"type": "string",
+			"source": "html",
+			"selector": "p",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},		
+		"kaLink": {
+			"type": "string",
+			"default": ""
+		},
+		"linkLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"hasLinkNofollow": {
+			"type": "boolean",
+			"default": false
+		},
+		"openNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "cta-button-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

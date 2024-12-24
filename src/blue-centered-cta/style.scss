@@ -1,0 +1,53 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ 
+.blue-centered-cta {
+  background: linear-gradient(-180deg, #0021a5 0%, #011877 100%)!important;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 7%;
+  padding-right: 7%;
+  overflow-x: hidden;
+
+  @media (min-width: 800px) {
+      padding-top: 120px;
+      padding-bottom: 65px;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+  }
+  
+      .cta-heading {
+          font-size: 30px;
+          line-height: 30px;
+          text-align: center;
+          color: #fff;
+          font-family: "gentonabbitalic";
+      }
+
+      .editor-styles-wrapper p, p {
+          font-family: 'gentonalight',Arial,sans-serif;
+          font-size: 22px;
+          line-height: 32px;
+          color: #fff !important;
+          margin-bottom: 60px;
+          text-align: center;
+          margin-bottom: 60px;
+      }
+  }
+
+
+
+  
+  .editor-styles-wrapper .button-wrapper .block-editor-block-list__layout {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 20px;
+   }
+   .editor-styles-wrapper .animated-border-button {
+    background: transparent;
+   }

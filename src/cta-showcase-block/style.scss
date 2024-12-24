@@ -1,0 +1,39 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-cta-showcase {
+	padding-top: 75px;
+	padding-bottom: 110px;
+	padding-left: 7.5%;
+	padding-right: 7.5%;
+  
+	h2 {
+	  text-align: center;
+	  color: #000;
+	}
+  
+	.lead {
+	  font-size: 20px;
+	  line-height: 32px;
+	  text-align: center;
+	  color: #000;
+	  margin-bottom: 50px;
+  
+	  @media (min-width: 800px) {
+		font-size: 22px;
+		line-height: 32px;
+	  }
+	}
+
+}
+
+
+
+.cta-button-wrapper .block-list-appender {
+    position: relative !important;
+	bottom: 20px;
+}

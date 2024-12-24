@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/blue-centered-cta-button",
+	"parent": [ "create-block/blue-centered-cta" ],
+	"version": "0.1.0",
+	"title": "Blue CTA Buttons",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "Blue CTA Bottom Buttons",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"buttonLabel": {
+			"type": "string",
+			"default": "Learn More"
+		},
+		"buttonLink": {
+			"type": "string",
+			"default": ""
+		},
+		"hasLinkNofollow": {
+			"type": "boolean",
+			"default": false
+		},
+		"openNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "blue-centered-cta-button",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

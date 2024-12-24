@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/blockquote",
+	"version": "0.1.0",
+	"title": "Blockquote",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "Blockquote",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"name": {
+			"type": "string",
+			"default": "Name"
+		},
+		"title": {
+			"type": "string",
+			"default": "Job Title"
+		},
+		"text": {
+			"type": "string",
+			"default": "Quote Content"
+		}
+	},
+	"textdomain": "block-quote",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

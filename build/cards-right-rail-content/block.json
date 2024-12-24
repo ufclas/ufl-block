@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/cards-right-rail-content",
+  "parent": [
+    "create-block/cards-right-rail"
+  ],
+  "version": "0.1.0",
+  "title": "Cards Right Rail Content",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "sectionSubtitle": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "cards-right-rail-content",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,17 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-cta-showcase {
+	border: 1px dotted #f00;
+}
+.wp-block-create-block-content-carousel-inner-block {
+	min-height: 600px;
+}
+
+.editor-styles-wrapper .row {
+    position: relative;
+    z-index: 9999999999999;
+}

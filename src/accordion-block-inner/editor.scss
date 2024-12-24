@@ -1,0 +1,25 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-cta-showcase {
+	border: 1px dotted #f00;
+}
+
+
+
+.editor-styles-wrapper .accordion-collapse {
+    display: block !important;
+}
+
+
+.wp-block-create-block-accordion-block .collapse {
+    display: block !important;
+}
+
+
+.accordion-item .collapse:not(.show) {
+    display: block !important;
+}

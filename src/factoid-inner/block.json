@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/factoid-inner",
+	"parent": [ "create-block/factoids" ],
+	"version": "0.1.0",
+	"title": "Factoid Inner",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"factoidNumber": {
+			"type": "string",
+			"selector": ".factoid-number",
+			"default": ""
+		},
+		"factoidSubHead": {
+			"type": "string",
+			"selector": ".factoid-subhead",
+			"default": ""
+		},
+		"factoidSubText": {
+			"type": "string",
+			"selector": ".factoid-subtext",
+			"default": ""
+		}
+	},
+	"textdomain": "factoid-inner",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,99 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+ .wp-block-create-block-announcements-showcase-block {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-x: hidden;
+  
+    @media (min-width: 991px) {
+      padding-top: 120px;
+      padding-bottom: 65px;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+    }
+  
+    .heading-left-col {
+      position: relative;
+      margin-right: 70px;
+  
+      @media (max-width: 991px) {
+        width: 100%;
+        margin-right: 0px;
+  
+        .heading-blue {
+          text-align: center !important;
+        }
+      }
+  
+      .heading-blue {
+        font-family: "gentonabbitalic" !important;
+        font-size: 38px;
+        line-height: 40px;
+        font-style: italic;
+        color: #0321a5;
+        text-align: right;
+      }
+    }
+  
+    .text-right-col {
+      width: 100%;
+      position: relative;
+  
+      @media (min-width: 992px) {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+  
+      &:after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: #fa4616;
+        display: inline-block;
+        position: absolute;
+        left: -34px;
+        top: 0;
+        opacity: 0;
+  
+        @media (min-width: 992px) {
+          opacity: 1;
+        }
+      }
+  
+      p {
+        font-size: 26px;
+        line-height: 36px;
+        text-align: center;
+        color: #000;
+        font-family: "gentonalight";
+  
+        @media (min-width: 991px) {
+          text-align: left;
+        }
+      }
+    }
+  
+    .button-wrapper {
+      max-width: 1320px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+  
+      @media (min-width: 992px) {
+        justify-content: end;
+      }
+  
+      a {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  

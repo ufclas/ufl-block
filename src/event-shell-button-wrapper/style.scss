@@ -1,0 +1,13 @@
+.wp-block-create-block-event-shell-button-wrapper {
+    align-content: center !important;
+    margin-top: 3rem !important;
+    row-gap: 10px;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    display: flex !important;
+
+    @media (min-width: 767px) {
+        flex-wrap: nowrap;
+      }
+}

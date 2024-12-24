@@ -1,0 +1,131 @@
+.card-right-rail-section {
+  overflow-x: hidden;
+  
+    .container {
+      @media (min-width: 950px) and (max-width: 1600px) {
+        max-width: 100%;
+        padding-right: 300px;
+        padding-left: 5%;
+      }
+
+      a {
+        font-family: "gentonamedium";
+        color: #0021a5;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+          color: #000;
+        }
+      }
+      
+    }
+  
+    .card-rail-wrapper {
+      display: flex;
+      justify-content: center;
+      align-content: stretch;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+  
+      @media (min-width: 950px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .card-right-rail {
+        width: 100%;
+        max-width: 277px;
+        height: fit-content;
+        background: #f4f6f6;
+        cursor: pointer;
+        margin-bottom: 30px;
+  
+        .card-right-rail-inner-wrapper {
+          padding: 25px 36px;
+        }
+        div.card-right-rail-inner-wrapper {
+          cursor: auto;
+      }
+      .animated-underline-button {
+        pointer-events: none;
+        cursor: pointer;
+      }
+        .crr-header {
+          font-size: 28px;
+          line-height: 32px;
+          text-align: left;
+          color: #0021a5;
+          font-family: "gentonasemibold";
+          margin-bottom: 10px;
+        }
+
+        .crr-sub-header {
+          font-size: 24px;
+          line-height: 32px;
+          text-align: left;
+          color: #0021a5;
+          font-family: "gentonabook";
+          border-bottom: 2px dotted #FA4616;
+          margin-bottom: 10px;
+      }
+
+  
+        .crr-text {
+          font-size: 20px;
+          line-height: 24px;
+          text-align: left;
+          color: #313535;
+          font-family: "gentonalight";
+        }
+  
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }
+
+        a:focus + .animated-underline-button {
+
+            
+            &::after {
+                width: 26px;
+            }
+        }
+  
+        &:hover {
+          .animated-underline-button {
+
+            &::after {
+              width: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  .editor-styles-wrapper .card-rail-wrapper {
+    position: relative !important;
+    width: 100%;
+  }
+
+  .editor-styles-wrapper .card-rail-wrapper .block-editor-inner-blocks {
+    width: 100%;
+  }
+
+  .editor-styles-wrapper .card-rail-wrapper .block-editor-block-list__layout {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 20px;
+  }

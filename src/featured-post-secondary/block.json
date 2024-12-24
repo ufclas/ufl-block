@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/featured-post-secondary",
+	"parent": [ "create-block/featured-posts" ],
+	"version": "0.1.0",
+	"title": "Supporting Featured Posts",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"sectionSubtitle": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "featured-post-secondary",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

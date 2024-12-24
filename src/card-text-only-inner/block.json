@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/card-text-only-inner",
+	"parent": [ "create-block/card-text-only" ],
+	"version": "0.1.0",
+	"title": "Card Text Only - Inner Card",
+	"category": "theme",
+	"icon": "index-card",
+	"description": "Card Text Only - Card",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"subText": {
+			"type": "string",
+			"default": ""
+		},
+		"slideLink": {
+			"type": "string",
+			"default": ""
+		},
+		"hasLinkNofollow": {
+			"type": "boolean",
+			"default": false
+		},
+		"openNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "card-text-only-inner",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
