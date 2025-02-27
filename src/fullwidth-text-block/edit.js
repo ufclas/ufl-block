@@ -40,11 +40,16 @@ export default function Edit() {
 
 
   const TEMPLATE = [
-    ['core/columns', { columns: 1 }, [
+    ['core/columns', { 
+        columns: 1,
+        supports: {color: false}
+      },
+       [
       ['core/column', {}, [
         ['core/heading', {
           level: 2,
-          placeholder: 'Enter header...'
+          placeholder: 'Enter header',
+          supports: {color:false},
         }],
         ['core/paragraph', {
           placeholder: 'Enter Intro content...',

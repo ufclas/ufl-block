@@ -76,7 +76,7 @@ const Edit = (props) => {
 
 			<InspectorControls>
 				<PanelBody
-					title={__('Multiple Featured Video - Item', 'featured-video')}
+					title={__('Multiple Featured Video Item - YouTube', 'featured-video')}
 					initialOpen={true}
 				>
 					<PanelRow>

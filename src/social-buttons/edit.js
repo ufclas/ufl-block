@@ -25,9 +25,14 @@ const Edit = (props) => {
 						['create-block/social-icon-twitter'],
 						['create-block/social-icon-instagram'],
 						['create-block/social-icon-youtube'],
+						['create-block/social-icon-linkedin'],
 					]}
 					allowedBlocks={[
-						'create-block/social-icon-facebook', 'create-block/social-icon-twitter', 'create-block/social-icon-instagram', 'create-block/social-icon-youtube',
+						'create-block/social-icon-facebook', 
+						'create-block/social-icon-twitter', 
+						'create-block/social-icon-instagram', 
+						'create-block/social-icon-youtube',
+						'create-block/social-icon-linkedin',
 					]}
 				/>
 			</div>

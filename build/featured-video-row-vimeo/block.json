@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/featured-video-row-vimeo",
+  "parent": [
+    "create-block/featured-video-multiple-vimeo"
+  ],
+  "version": "0.1.0",
+  "title": "Featured Video - Multiple Row - Vimeo",
+  "category": "theme",
+  "icon": "index-card",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "featured-video-row-vimeo",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

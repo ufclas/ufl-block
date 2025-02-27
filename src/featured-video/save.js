@@ -1,12 +1,13 @@
 /**
  * WordPress dependencies
  */
+/* Not being used as this block has been converted to dynamic. Changes to output are made in render-callback.php */
 import { __ } from '@wordpress/i18n';
 import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
 	const {
-		attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab, youtubeEmbed },
+		attributes: { title, subTitle, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab, youtubeEmbed },
 	} = props;
 
 	const blockProps = useBlockProps.save();

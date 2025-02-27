@@ -4,7 +4,7 @@
 	"name": "create-block/featured-video-item",
 	"parent": [ "create-block/featured-video-row" ],
 	"version": "0.1.0",
-	"title": "Featured Video Item",
+	"title": "Featured Video Item - YouTube",
 	"category": "theme",
 	"icon": "index-card",
 	"description": "",

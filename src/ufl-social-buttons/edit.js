@@ -26,9 +26,15 @@ const Edit = (props) => {
 						['create-block/ufl-social-icon-twitter'],
 						['create-block/ufl-social-icon-instagram'],
 						['create-block/ufl-social-icon-youtube'],
+						['create-block/ufl-social-icon-linkedin'],
 					]}
 					allowedBlocks={[
-						'create-block/ufl-social-icon-facebook', 'create-block/ufl-social-icon-twitter', 'create-block/ufl-social-icon-instagram', 'create-block/ufl-social-icon-youtube', 'create-block/ufl-social-icon-custom'
+						'create-block/ufl-social-icon-facebook', 
+						'create-block/ufl-social-icon-twitter', 
+						'create-block/ufl-social-icon-instagram', 
+						'create-block/ufl-social-icon-youtube', 
+						'create-block/ufl-social-icon-linkedin', 
+						'create-block/ufl-social-icon-custom'
 					]}
 				/>
 			</div>

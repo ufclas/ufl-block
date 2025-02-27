@@ -13,12 +13,10 @@
   "attributes": {
     "title": {
       "type": "string",
-      "selector": "h2",
       "default": ""
     },
     "subTitle": {
       "type": "string",
-      "selector": "p",
       "default": ""
     },
     "youtubeEmbed": {

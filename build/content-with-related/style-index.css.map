@@ -1,1 +1,0 @@
-{"version":3,"file":"content-with-related/style-index.css","mappings":";;;AACE;EACE;EACA;AAAJ,C","sources":["webpack://ufl-block/./src/content-with-related/style.scss"],"sourcesContent":["\n  .editor-styles-wrapper .news-related-link {\n    max-width: 250px !important;\n    display: block;\n}\n"],"names":[],"sourceRoot":""}

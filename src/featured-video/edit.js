@@ -33,8 +33,6 @@ const Edit = (props) => {
 		setAttributes({ youtubeEmbed: embedLink })
 	}
 
-
-
 	const onChangeLinkLabel = (newLinkLabel) => {
 		setAttributes({ linkLabel: newLinkLabel === undefined ? '' : newLinkLabel })
 	}
@@ -67,9 +65,7 @@ const Edit = (props) => {
 
 
 	return (
-
 		<>
-
 			<InspectorControls>
 				<PanelBody
 					title={__('Featured Video', 'featured-video')}
@@ -210,7 +206,7 @@ const Edit = (props) => {
 						</a>
 					</div>
 					<div className="featured-video-content-wrapper">
-						<div className="col-12 col-md-8">
+						<div className="col-12">
 							<RichText
 								tagName="h2"
 								placeholder={__(
@@ -223,7 +219,7 @@ const Edit = (props) => {
 							<RichText
 								tagName="p"
 								placeholder={__(
-									'Write title…'
+									'Write description…'
 								)}
 								value={subTitle}
 								onChange={onChangeContent}

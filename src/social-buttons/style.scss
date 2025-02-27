@@ -11,3 +11,17 @@
   flex-direction: row;
   align-items: center;
 }
+
+.editor-styles-wrapper .ufl-brands {
+  display: flex;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  max-width:35px;
+  max-height:35px;
+  margin-bottom:20px;
+}

@@ -20,6 +20,9 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
+require_once('render-callback.php');
+require_once('enqueue.php');
+
 function create_block_ufl_block_block_init() {
 	register_block_type( __DIR__ . '/build/announcements-showcase-block' );
 	register_block_type( __DIR__ . '/build/announcement-showcase-button' );
@@ -49,7 +52,9 @@ function create_block_ufl_block_block_init() {
 	register_block_type( __DIR__ . '/build/card-text-image-inner' );
 	register_block_type( __DIR__ . '/build/card-text-only' );
 	register_block_type( __DIR__ . '/build/card-text-only-inner' );
-	register_block_type( __DIR__ . '/build/featured-video' );
+	register_block_type( __DIR__ . '/build/featured-video', array(
+		'render_callback' => 'render_featured_video_block',
+	) );
 	register_block_type( __DIR__ . '/build/event-shell' );
 	register_block_type( __DIR__ . '/build/event-shell-slider' );
 	register_block_type( __DIR__ . '/build/event-shell-slide' );
@@ -65,6 +70,7 @@ function create_block_ufl_block_block_init() {
 	register_block_type( __DIR__ . '/build/social-icon-twitter' );
 	register_block_type( __DIR__ . '/build/social-icon-instagram' );
 	register_block_type( __DIR__ . '/build/social-icon-youtube' );
+	register_block_type( __DIR__ . '/build/social-icon-linkedin' );
 	register_block_type( __DIR__ . '/build/image-modal' );
 	register_block_type( __DIR__ . '/build/image-gallery-slide' );
 	register_block_type( __DIR__ . '/build/image-gallery' );
@@ -79,6 +85,9 @@ function create_block_ufl_block_block_init() {
 	register_block_type( __DIR__ . '/build/featured-video-multiple' );
 	register_block_type( __DIR__ . '/build/featured-video-row' );
 	register_block_type( __DIR__ . '/build/featured-video-item' );
+	register_block_type( __DIR__ . '/build/featured-video-multiple-vimeo' );
+	register_block_type( __DIR__ . '/build/featured-video-row-vimeo' );
+	register_block_type( __DIR__ . '/build/featured-video-item-vimeo' );
 	register_block_type( __DIR__ . '/build/content-carousel-stack' );
 	register_block_type( __DIR__ . '/build/content-carousel-stack-inner' );
 	register_block_type( __DIR__ . '/build/featured-cards' );
@@ -117,6 +126,7 @@ function create_block_ufl_block_block_init() {
 	register_block_type( __DIR__ . '/build/ufl-social-icon-twitter' );
 	register_block_type( __DIR__ . '/build/ufl-social-icon-instagram' );
 	register_block_type( __DIR__ . '/build/ufl-social-icon-youtube' );
+	register_block_type( __DIR__ . '/build/ufl-social-icon-linkedin' );
 	register_block_type( __DIR__ . '/build/ufl-social-icon-custom' );
 
 }

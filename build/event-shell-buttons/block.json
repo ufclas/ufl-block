@@ -16,7 +16,7 @@
   "attributes": {
     "buttonLabel": {
       "type": "string",
-      "default": "Add Text 2"
+      "default": "Add Text"
     },
     "buttonLink": {
       "type": "string",
