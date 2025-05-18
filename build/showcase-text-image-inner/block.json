@@ -40,6 +40,38 @@
       "type": "boolean",
       "default": false
     },
+    "link2": {
+      "type": "string",
+      "default": ""
+    },
+    "linkLabel2": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow2": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab2": {
+      "type": "boolean",
+      "default": false
+    },
+    "link3": {
+      "type": "string",
+      "default": ""
+    },
+    "linkLabel3": {
+      "type": "string",
+      "default": ""
+    },
+    "hasLinkNofollow3": {
+      "type": "boolean",
+      "default": false
+    },
+    "openNewTab3": {
+      "type": "boolean",
+      "default": false
+    },
     "mediaID": {
       "type": "number",
       "default": ""

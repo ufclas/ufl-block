@@ -24,11 +24,12 @@
       display: block;
       @media (min-width: 800px) {
         margin-bottom: 40px;
-        
+        font-size: 46px;
+        line-height: 50px;
       }
 
       a {
-        font-family: "gentonamedium";
+        font-family: "IBM Plex medium";
         color: #0021a5;
         text-decoration: none;
 
@@ -44,7 +45,7 @@
       font-size: 22px;
       line-height: 32px;
       color: #343741;
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
       margin-bottom: 20px;
 
       @media (min-width: 800px) {

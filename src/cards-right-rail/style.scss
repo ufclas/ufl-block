@@ -9,7 +9,7 @@
       }
 
       a {
-        font-family: "gentonamedium";
+        font-family: "IBM Plex medium";
         color: #0021a5;
         text-decoration: none;
 
@@ -57,13 +57,15 @@
       .animated-underline-button {
         pointer-events: none;
         cursor: pointer;
+        font-size: 16px;
+        line-height: 21px;
       }
         .crr-header {
-          font-size: 28px;
-          line-height: 32px;
+          font-size: 25px;
+          line-height: 29px;
           text-align: left;
           color: #0021a5;
-          font-family: "gentonasemibold";
+          font-family: "IBM Plex semibold";
           margin-bottom: 10px;
         }
 
@@ -72,18 +74,18 @@
           line-height: 32px;
           text-align: left;
           color: #0021a5;
-          font-family: "gentonabook";
+          font-family: "IBM Plex regular";
           border-bottom: 2px dotted #FA4616;
           margin-bottom: 10px;
       }
 
   
         .crr-text {
-          font-size: 20px;
-          line-height: 24px;
+          font-size: 17px;
+          line-height: 21px;
           text-align: left;
           color: #313535;
-          font-family: "gentonalight";
+          font-family: "IBM Plex light";
         }
   
         a {

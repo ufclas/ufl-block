@@ -61,6 +61,30 @@ const Edit = (props) => {
 							/>
 						</fieldset>
 					</PanelRow>
+					<PanelRow>
+						<fieldset>
+							<TextControl
+								label={__('Link', 'slider-manual')}
+								value={link}
+								onChange={(newMessage) =>
+									setAttributes({ link: newMessage })
+								}
+								help={__('Link below destination', 'slider-manual')}
+							/>
+						</fieldset>
+					</PanelRow>
+					<PanelRow>
+						<fieldset>
+							<TextControl
+								label={__('Link Text', 'slider-manual')}
+								value={linkLabel}
+								onChange={(newMessage) =>
+									setAttributes({ linkLabel: newMessage })
+								}
+								help={__('Link below text', 'slider-manual')}
+							/>
+						</fieldset>
+					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
 

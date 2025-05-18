@@ -33,7 +33,7 @@
     color: #fa4616;
     font-size: 24px;
     line-height: 24px;
-    font-family: 'gentonaextrabolditalic';
+    font-family: "IBM Plex bold italic";
     margin-bottom: 30px;
 
     @media (min-width: 991px) {
@@ -45,7 +45,7 @@
   .alert-body {
     p,
     a {
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
       font-size: 17px;
       margin-bottom: 22px;
 
@@ -91,7 +91,7 @@
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff' ><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
     margin-left: 10px;
     font-size: 18px;
-    font-family: "gentonamedium";
+    font-family: "IBM Plex medium";
     
 
     &:hover, &:focus {

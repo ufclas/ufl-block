@@ -10,7 +10,7 @@
   }
 
   strong {
-    font-family: "gentonasemibold";
+    font-family: "IBM Plex semibold";
   }
 
   hr {
@@ -24,7 +24,7 @@
     max-width: 1074px;
 
     h1 {
-      font-family: "gentonabook";
+      font-family: "IBM Plex regular";
       font-weight: 500;
       font-size: 60px;
       line-height: 54px;
@@ -33,7 +33,7 @@
     }
 
     h2 {
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
       font-size: 26px;
       line-height: 48px;
       text-align: left;
@@ -51,14 +51,14 @@
       }
       .faculty-tel {
         text-decoration: none !important;
-        font-family: "gentonalight";
+        font-family: "IBM Plex light";
         font-size: 20px;
         line-height: 28px;
       }
       a {
         color: #fff !important;
         text-decoration: underline !important;
-        font-family: "gentonalight" !important;
+        font-family: "IBM Plex light" !important;
 
         &:hover, &:focus {
           text-decoration: none;
@@ -68,7 +68,7 @@
 
     .faculty-bio-info {
       .lead {
-        font-family: "gentonasemibold";
+        font-family: "IBM Plex semibold";
         margin-bottom: 0;
       }
       p,
@@ -92,7 +92,7 @@
       font-size: 26px;
       line-height: 38px;
       color: #343741;
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
       margin-bottom: 40px;
     }
   }

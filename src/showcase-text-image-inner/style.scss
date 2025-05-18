@@ -6,4 +6,38 @@
  */
 
 
- 
+ .sti-btn-wrap a {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display:block;
+ }
+ .sti-btn-wrap a.components-external-link.button.animated-border-button.button-border-blue.button-text-dark {
+   margin-right: 20px;
+   margin-bottom: 20px;
+}
+.sti-btn-wrap a.components-external-link.button.animated-border-button.button-border-blue.button-text-dark .components-external-link__contents {
+   text-decoration: none;
+}
+.editor-styles-wrapper a.animated-border-button {
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-top-width: 0;
+   border-bottom-width: 0;
+   border-style: solid;
+   padding: 15px 43px;
+   position: relative;
+   font-size: 26px;
+   font-family: "IBM Plex semibold", Arial, sans-serif;
+   text-align: center;
+   user-select: none;
+   vertical-align: middle;
+   white-space: normal;
+   display: block;
+   cursor: pointer;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   margin-bottom: 20px;
+   margin-right: 20px;
+   color:black;
+};

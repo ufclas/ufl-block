@@ -66,7 +66,7 @@
 		  color: #fff;
 		  text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
 		  margin-bottom: 25px;
-		  font-family: "gentonabook";
+		  font-family: "IBM Plex regular";
 		  text-transform: uppercase;
 	  
 		  @media (min-width: 768px) {
@@ -85,7 +85,7 @@
 			text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
 			position: relative;
 			transition: all 0.25s ease-in-out;
-			font-family: "gentonabbitalic";
+			font-family: "IBM Plex bold italic";
 			margin-bottom: 30px;
 	  
 			&:after {
@@ -129,7 +129,7 @@
 		  -webkit-transition: all 0.25s ease-in-out;
 		  transition: all 0.25s ease-in-out;
 		  color: #fff;
-		  font-family: "gentonabook";
+		  font-family: "IBM Plex regular";
 		  line-height: 24px;
 		  font-size: 18px;
 	
