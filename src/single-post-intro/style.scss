@@ -36,7 +36,9 @@
       color: #0021a5;
 
       .social-column-grey {
-        gap: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
       }
 
       span {
@@ -76,4 +78,97 @@
       margin: 0;
       opacity: 1;
     }
+  }
+
+  // Bluesky button styles - match ShareThis button styling
+  .bluesky-share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-left: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transition: opacity 0.2s ease-in, top 0.2s ease-in;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    background-color: #f4f4f4;
+    border-radius: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      top: -4px;
+      opacity: 0.9;
+      background-color: #ffffff;
+
+      svg path {
+        fill: var(--ufl-blue, #0021a5);
+      }
+    }
+  }
+
+  // Override parent theme's background color for Bluesky button
+  .social-column-grey .bluesky-share-btn {
+    background-color: #f4f4f4 !important;
+  }
+
+  .social-column-grey .bluesky-share-btn:hover {
+    background-color: #F6F6F6 !important;
+  }
+
+  // Ensure consistent display for social buttons on both posts and pages
+  .social-column-grey {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    white-space: nowrap;
+
+    // Ensure the Share text aligns properly
+    > span:first-child {
+      margin-right: 10px;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    // Ensure ShareThis container displays inline
+    .sharethis-inline-share-buttons {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+
+  // Mobile responsive adjustments
+  @media (max-width: 767px) {
+    .social-column-grey {
+      white-space: normal;
+    }
+  }
+
+  // Hide specific ShareThis buttons based on data attributes
+  .sharethis-inline-share-buttons[data-show-facebook="false"] .st-btn[data-network='facebook'] {
+    display: none !important;
+  }
+
+  .sharethis-inline-share-buttons[data-show-twitter="false"] .st-btn[data-network='twitter'] {
+    display: none !important;
+  }
+
+  .sharethis-inline-share-buttons[data-show-email="false"] .st-btn[data-network='email'] {
+    display: none !important;
+  }
+
+  .sharethis-inline-share-buttons[data-show-linkedin="false"] .st-btn[data-network='linkedin'] {
+    display: none !important;
   }

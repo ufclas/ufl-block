@@ -18,6 +18,26 @@
     "sectionSubtitle": {
       "type": "string",
       "default": ""
+    },
+    "showFacebook": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTwitter": {
+      "type": "boolean",
+      "default": true
+    },
+    "showEmail": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLinkedin": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBluesky": {
+      "type": "boolean",
+      "default": true
     }
   },
   "textdomain": "single-post-intro",

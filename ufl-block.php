@@ -108,7 +108,9 @@ function create_block_ufl_block_block_init() {
 
 	register_block_type( __DIR__ . '/build/post-header' );
 	register_block_type( __DIR__ . '/build/post-footer-block' );
-	register_block_type( __DIR__ . '/build/single-post-intro' );
+	register_block_type( __DIR__ . '/build/single-post-intro', array(
+		'render_callback' => 'render_single_post_intro_block',
+	) );
 
 	register_block_type( __DIR__ . '/build/slider-manual' );
 	register_block_type( __DIR__ . '/build/slider-manual-inner' );
