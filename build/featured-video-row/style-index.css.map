@@ -1,0 +1,1 @@
+{"version":3,"file":"featured-video-row/style-index.css","mappings":";;;AAGA;EACI;AAFJ;;AAMA;EACI;AAHJ,C","sources":["webpack://ufl-block/./src/featured-video-row/style.scss"],"sourcesContent":["\n\n\n.multiple-video-container .row {\n    display: none;\n}\n\n\n.editor-styles-wrapper .multiple-video-container .row {\n    display: block;\n}"],"names":[],"sourceRoot":""}

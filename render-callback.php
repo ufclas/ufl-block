@@ -5,7 +5,7 @@ if ( ! function_exists( 'register_block_type' ) ) {
 
 function render_featured_video_block( $attributes ) {
     // Extract attributes
-    $title = $attributes['title'] ?? '';
+    $title = $attributes['title'] ?? 'Featured Video';
     $subTitle = $attributes['subTitle'] ?? '';
     $mediaURL = $attributes['mediaURL'] ?? '';
     $link = $attributes['link'] ?? '';

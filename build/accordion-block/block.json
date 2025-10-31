@@ -14,6 +14,10 @@
     "blockID": {
       "type": "string",
       "default": ""
+    },
+    "initClosed": {
+      "type": "boolean",
+      "default": false
     }
   },
   "textdomain": "accordion-block",

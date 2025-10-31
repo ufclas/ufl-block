@@ -4,10 +4,8 @@
  * Description:       Custom UFL BLocks
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.2
- * Author:            The WordPress Contributors
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Version:           1.3
+ * Author:            UFL
  * Text Domain:       ufl-block
  *
  * @package           create-block
@@ -26,7 +24,7 @@ require_once('enqueue.php');
 function create_block_ufl_block_block_init() {
 	register_block_type( __DIR__ . '/build/announcements-showcase-block' );
 	register_block_type( __DIR__ . '/build/announcement-showcase-button' );
-	register_block_type( __DIR__ . '/build/content-carousel-block' );
+	register_block_type( __DIR__ . '/build/content-carousel' );
 	register_block_type( __DIR__ . '/build/content-carousel-inner-block' );
 	register_block_type( __DIR__ . '/build/cta-buttons-block' );
 	register_block_type( __DIR__ . '/build/cta-showcase-block' );
