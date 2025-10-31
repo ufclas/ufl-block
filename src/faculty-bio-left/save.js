@@ -23,7 +23,8 @@ const Save = (props) => {
 						<p>{name}</p>
 						<p>{title}</p>
 						<p><a className="faculty-tel" href={"tel:" + phone}>{phone}</a></p>
-						<p><a className="faculty-email" href={email}>Send Email</a></p>
+						{email &&
+						 <p><a className="faculty-email" href={"mailto:" + email}>Send Email</a></p>}
 					</div>
 				</div>
 			</div>

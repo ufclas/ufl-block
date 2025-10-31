@@ -20,7 +20,9 @@
   .img-gallery-container .row {
     gap: 29px 26px;
   }
-
+  .img-gallery-container > * {
+    justify-content: space-evenly;
+  }
   .carousel {
     max-width: 1920px;
     margin-left: auto;

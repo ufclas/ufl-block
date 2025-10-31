@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "create-block/cards-right-rail-cards",
-	"parent": [ "create-block/cards-right-rail-wrapper" ],
+	"parent": [ "create-block/cards-right-rail-card-wrapper" ],
 	"version": "0.1.0",
 	"title": "Cards Right Rail Card",
 	"category": "theme",
