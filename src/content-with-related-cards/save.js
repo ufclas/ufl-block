@@ -6,7 +6,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
 	const {
-		attributes: { title, subTitle, content, linktext, link, hasLinkNofollow, openNewTab, mediaID, mediaURL, },
+		attributes: { title, subTitle, content, linktext, link, hasLinkNofollow, openNewTab, mediaID, mediaAlt, mediaURL, },
 	} = props;
 
 	const blockProps = useBlockProps.save();
@@ -25,8 +25,7 @@ const Save = (props) => {
 					 className="figure-img img-fluid"
 					 src={mediaURL}
 					 alt={__(
-						 'Upload Post Image',
-						 'ufl-block'
+						mediaAlt
 					 )} />
 				)}
 

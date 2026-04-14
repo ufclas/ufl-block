@@ -149,8 +149,8 @@ const Edit = (props) => {
 
 			<div className="video-col col-12 col-lg-4">
 				<div {...blockProps} >
-					<a href={ 'https://www.youtube.com/embed/' + youtubeEmbed + '?autoplay=1&rel=0'} className="video-wrapper" aria-label="Play Video" data-toggle="lightbox"  onClick={onLinkClick}>
-						<div className="video-play">
+					<a href={ 'https://www.youtube.com/embed/' + youtubeEmbed + '?autoplay=1&rel=0'} role="button" className="video-wrapper" aria-label={`Play video: ${title || 'video'}`} data-toggle="lightbox"  onClick={onLinkClick}>
+						<div className="video-play" aria-hidden="true">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 109">
 								<g fill="rgba(0,33,165,0.55)" stroke="#fff" strokeWidth="2" data-name="Ellipse 145">
 									<ellipse cx="55" cy="54.5" stroke="none" rx="55" ry="54.5" />
@@ -163,19 +163,15 @@ const Edit = (props) => {
 						<img
 							className="img-fluid video-thumb"
 							src={mediaURL}
-							alt={__(
-								'Play Video about [insert subject]',
-								'ufl-block'
-							)} />
+							alt=""
+							aria-hidden="true" />
 							) : (
 
 								<img
 								className="img-fluid video-thumb"
 								src={'https://i1.ytimg.com/vi/' + youtubeEmbed + '/0.jpg'}
-								alt={__(
-									'Play Video ',
-									'ufl-block'
-								)} />
+								alt=""
+								aria-hidden="true" />
 
 								
 							 )}
@@ -199,7 +195,7 @@ const Edit = (props) => {
 					<RichText
 						tagName="p"
 						placeholder={__(
-							'Write title…'
+							'Write description…'
 						)}
 						value={subTitle}
 						onChange={onChangeContent}

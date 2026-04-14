@@ -6,7 +6,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
   const {
-    attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab },
+    attributes: { title, subTitle, mediaID, mediaURL, mediaAlt, link, linkLabel, hasLinkNofollow, openNewTab },
   } = props;
 
   const blockProps = useBlockProps.save();
@@ -46,21 +46,25 @@ const Save = (props) => {
               <RichText.Content tagName="p" value={subTitle} />
             </div>
             <div className="col-md-5 button-col">
-              {link && (
-                <a href={link}
-                  className="button animated-border-button button-border-orange button-text-light"
-                  rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
-                  target={openNewTab ? "_blank" : "_self"}
-                >
-                  {linkLabel}
-                </a>
+              {(link && linkLabel) && (
+              <a href={link}
+                className="button animated-border-button button-border-orange button-text-light"
+                rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
+                target={openNewTab ? "_blank" : "_self"}
+              >
+                {linkLabel}
+              </a>
               )}
             </div>
           </div>
           {mediaURL && (
-            <div className="cc-bg-img" style={{ backgroundImage: "url(" + mediaURL + ")" }}></div>
+            <div 
+              className="cc-bg-img" 
+              style={{ backgroundImage: `url(${mediaURL})` }}
+              role="img"
+              aria-label={mediaAlt || __('Slide background', 'ufl-block')}
+            ></div>
           )}
-
         </div>
       </div>
     </>

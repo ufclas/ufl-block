@@ -18,7 +18,7 @@ const Save = (props) => {
 
 			<div {...blockProps}>
 				<div className="accordion-item">
-					<button className="tab-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse" + blockID} aria-expanded="true" aria-controls={"collapse" + blockID} tabIndex="0" id={"heading" + blockID}>
+					<button className="tab-link collapsed" role="tab" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse" + blockID} aria-expanded="true" aria-controls={"collapse" + blockID} tabIndex="0" id={"heading" + blockID}>
 						{title}
 					</button>
 					<div id={"collapse" + blockID} className="accordion-collapse collapse" aria-labelledby={"heading" + blockID} >

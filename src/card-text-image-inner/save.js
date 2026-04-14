@@ -6,7 +6,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
   const {
-    attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab },
+    attributes: { title, subTitle, mediaID, mediaURL, mediaAlt, link, linkLabel, hasLinkNofollow, openNewTab },
   } = props;
 
   const blockProps = useBlockProps.save();
@@ -18,23 +18,20 @@ const Save = (props) => {
             <img
               className="card-image"
               src={mediaURL}
-              alt={__('Card Image', 'ufl-block')}
+              alt={mediaAlt || __('Card Image', 'ufl-block')}
             />
           </div>
           <RichText.Content tagName="p" className="card-text" value={subTitle} />
 
           {link && (
-            <a href={link}
-              className="button animated-border-button button-border-orange button-text-dark"
-              rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
-              target={openNewTab ? "_blank" : "_self"}
-            >
-              {linkLabel}
-            </a>
-
-
-          )}
-
+          <a href={link}
+            className="button animated-border-button button-border-orange button-text-dark"
+            rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
+            target={openNewTab ? "_blank" : "_self"}
+          >
+            {linkLabel}
+          </a>
+        )}
         </div>
       </div>
     </>

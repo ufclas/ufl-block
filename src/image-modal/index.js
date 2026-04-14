@@ -9,6 +9,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import json from './block.json';
 import Edit from './edit';
 import save from './save';
+import deprecated from './deprecated.js';
 import './style.scss';
 
 // Destructure the json file to get the name and settings for the block
@@ -19,4 +20,6 @@ const { name } = json;
 registerBlockType( name, {
 	edit: Edit,
 	save, // Object shorthand property - same as writing: save: save,
+
+	deprecated: deprecated
 } );

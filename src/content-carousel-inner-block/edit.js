@@ -12,7 +12,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab },
+		attributes: { title, subTitle, mediaID, mediaURL, mediaAlt, link, linkLabel, hasLinkNofollow, openNewTab },
 		setAttributes,
 	} = props;
 
@@ -50,13 +50,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt || __('Slide Image', 'ufl-block')
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: ''
 		});
 	}
 
@@ -208,24 +210,34 @@ const Edit = (props) => {
 							<RichText
 								tagName="p"
 								placeholder={__(
-									'Write title…'
+									'Write text…'
 								)}
 								value={subTitle}
 								onChange={onChangeContent}
 							/>
 						</div>
 						<div className="col-md-5 button-col">
-							<ExternalLink
-								href={link}
-								className="button animated-border-button button-border-orange button-text-light"
-								rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
-								target={openNewTab ? "_blank" : "_self"}
-								onClick={onLinkClick} >
-								{linkLabel}
-							</ExternalLink>
+							 {(link && linkLabel) && (
+                                <ExternalLink
+                                    href={link}
+                                    className="button animated-border-button button-border-orange button-text-light"
+                                    rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
+                                    target={openNewTab ? "_blank" : "_self"}
+                                    onClick={onLinkClick} 
+                                >
+                                    {linkLabel}
+                                </ExternalLink>
+                            )}
 						</div>
 					</div>
-					<div className="cc-bg-img" style={{ backgroundImage: "url(" + mediaURL + ")" }}></div>
+					{mediaURL && (
+                        <div 
+                            className="cc-bg-img" 
+                            style={{ backgroundImage: `url(${mediaURL})` }}
+                            role="img"
+                            aria-label={mediaAlt || __('Slide background', 'ufl-block')}
+                        ></div>
+                    )}
 				</div>
 			</div>
 		</>

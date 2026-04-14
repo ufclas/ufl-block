@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { sectionTitle },
+		attributes: { sectionTitle, blackAndWhiteHoverToggle },
 		setAttributes,
 	} = props;
 
@@ -23,6 +23,9 @@ const Edit = (props) => {
 		setAttributes({ sectionTitle: value });
 	};
 
+	const toggleBlackAndWhite = () => {
+		setAttributes({ blackAndWhiteHoverToggle: !blackAndWhiteHoverToggle })
+	}
 
 	return (
 		<>
@@ -43,7 +46,15 @@ const Edit = (props) => {
 							/>
 						</fieldset>
 					</PanelRow>
-
+					<PanelRow>
+						<fieldset>
+							<ToggleControl
+								label="Black and White Hover"
+								checked={blackAndWhiteHoverToggle}
+								onChange={toggleBlackAndWhite}
+							/>
+						</fieldset>
+					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
 
@@ -60,7 +71,7 @@ const Edit = (props) => {
 
 
 			<div {...blockProps}>
-				<section className="faculty-listing-carousel-wrapper">
+				<section className={`faculty-listing-carousel-wrapper ${blackAndWhiteHoverToggle ? 'black-and-white-hover' : ''}`}>
 					<RichText
 						className="text-center text-white"
 						tagName="h2"

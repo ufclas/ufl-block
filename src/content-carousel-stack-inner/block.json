@@ -43,7 +43,11 @@
 		"mediaURL": {
 			"type": "string",
 			"default": ""
-		}
+		},
+		"mediaAlt": {
+            "type": "string",
+            "default": ""
+        }
 	},
 	"textdomain": "content-carousel-stack-inner",
 	"editorScript": "file:./index.js",

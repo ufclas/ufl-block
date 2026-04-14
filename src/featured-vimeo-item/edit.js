@@ -111,7 +111,7 @@ const Edit = (props) => {
 					</PanelRow>
 					<PanelRow>
 						<fieldset>
-						<TextControl
+							<TextControl
 								label={__('Vimeo ID', 'featured-video')}
 								value={embedUrl}
 								onChange={onChangeEmbed}
@@ -147,8 +147,10 @@ const Edit = (props) => {
 
 			<div className="video-col col-12 col-lg-4">
 				<div {...blockProps} >
-					<a href={ 'https://player.vimeo.com/video/' + embedUrl + '?autoplay=1&rel=0'} className="video-wrapper" aria-label="Play Video" data-toggle="lightbox"  onClick={onLinkClick}>
-						<div className="video-play">
+					<a href={'https://player.vimeo.com/video/' + embedUrl + '?autoplay=1&rel=0'} className="video-wrapper" role="button"
+						aria-label={`Play video: ${title || 'video'}`}
+						data-toggle="lightbox" onClick={onLinkClick}>
+						<div className="video-play" aria-hidden="true">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 109">
 								<g fill="rgba(0,33,165,0.55)" stroke="#fff" strokeWidth="2" data-name="Ellipse 145">
 									<ellipse cx="55" cy="54.5" stroke="none" rx="55" ry="54.5" />
@@ -157,14 +159,12 @@ const Edit = (props) => {
 								<path fill="#fff" d="M75.445 55.49 47 37.99V73Z" data-name="Path 5" />
 							</svg>
 						</div>
-						
+
 						<img
 							className="img-fluid video-thumb"
 							src={mediaURL ? mediaURL : '/wp-content/plugins/ufl-block/assets/images/play_video.png'}
-							alt={__(
-								'Play Video about [insert subject]',
-								'ufl-block'
-							)} />
+							alt=""
+							aria-hidden="true" />
 					</a>
 					<RichText
 						tagName="p"
@@ -180,7 +180,7 @@ const Edit = (props) => {
 					<RichText
 						tagName="p"
 						placeholder={__(
-							'Write title…'
+							'Write description…'
 						)}
 						value={subTitle}
 						onChange={onChangeContent}

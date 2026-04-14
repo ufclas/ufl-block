@@ -1,5 +1,6 @@
 .card-right-rail-section {
   overflow-x: hidden;
+      margin: 5rem auto;
   
     .container {
       @media (min-width: 950px) and (max-width: 1600px) {
@@ -115,7 +116,10 @@
       }
     }
   }
-  
+ .fullwidth-text-block {
+    padding-left: 10%;
+    padding-right: 15%;
+ } 
 
   .editor-styles-wrapper .card-rail-wrapper {
     position: relative !important;

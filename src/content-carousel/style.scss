@@ -157,7 +157,8 @@
       .animated-border-button {
         font-family: "IBM Plex medium", Arial, sans-serif;
         direction: ltr;
-  
+        color: #ffffff;
+        border-color: #fa4616;
         @media (min-width: 767px) {
           line-height: 70px;
         }

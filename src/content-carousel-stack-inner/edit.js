@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL },
+		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL, mediaAlt },
 		setAttributes,
 	} = props;
 
@@ -49,12 +49,14 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt || __('Slide Image', 'ufl-block')
 		});
 	};
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: ''
 		});
 	}
 
@@ -68,8 +70,6 @@ const Edit = (props) => {
 					title={__('Content Carousel — Stack Slide', 'content-carousel-stack-inner')}
 					initialOpen={true}
 				>
-
-
 
 					<PanelRow>
 						<fieldset>
@@ -164,12 +164,14 @@ const Edit = (props) => {
 
 
 
-			<div className="slider__content">
+			<div className="slider__content" id="stackSlide">
 				<figure className="slider__image">
-					<img
-						src={mediaURL}
-						alt={'Slide Image'}
-					/>
+					 {mediaURL && (
+                            <img
+                                src={mediaURL}
+                                alt={mediaAlt || __('Slide Image', 'ufl-block')}
+                            />
+                        )}
 				</figure>
 				<div className="slider__text">
 					<RichText
@@ -183,7 +185,7 @@ const Edit = (props) => {
 					<RichText
 						tagName="p"
 						placeholder={__(
-							'Write title…'
+							'Write text…'
 						)}
 						value={text}
 						onChange={onChangeText}

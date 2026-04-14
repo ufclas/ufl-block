@@ -18,6 +18,10 @@
 		"lightToggle": {
 			"type": "boolean",
 			"default": false
+		},
+		"blackAndWhiteHoverToggle": {
+			"type": "boolean",
+			"default": false
 		}
 	},
 	"textdomain": "faculty-landing",

@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab },
+		attributes: { title, subTitle, mediaID, mediaURL, mediaAlt, link, linkLabel, hasLinkNofollow, openNewTab },
 		setAttributes,
 	} = props;
 
@@ -47,13 +47,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt || __('Card Image', 'ufl-block')
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: ''
 		});
 	}
 	const onLinkClick = (event) => {
@@ -73,8 +75,6 @@ const Edit = (props) => {
 					<PanelRow>
 						<fieldset>
 							<MediaUploadCheck>
-
-
 								<MediaUpload
 									onSelect={onSelectImage}
 									allowedTypes="image"
@@ -96,11 +96,13 @@ const Edit = (props) => {
 								/>
 							</MediaUploadCheck>
 
-							{mediaID != 0 &&
-								<MediaUploadCheck>
-									<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'ufl-block')}</Button>
-								</MediaUploadCheck>
-							}
+							  {mediaID !== 0 &&
+                                <MediaUploadCheck>
+                                    <Button onClick={removeMedia} isLink isDestructive>
+                                        {__('Remove image', 'ufl-block')}
+                                    </Button>
+                                </MediaUploadCheck>
+                            }
 
 						</fieldset>
 					</PanelRow>
@@ -140,16 +142,16 @@ const Edit = (props) => {
 					</PanelRow>
 					<PanelRow>
 						<fieldset>
-							<ToggleControl
-								label="Open in New Tab?"
-								help={
-									openNewTab
-										? 'Has rel nofollow.'
-										: 'No rel nofollow.'
-								}
-								checked={openNewTab}
-								onChange={toggleNewTab}
-							/>
+							 <ToggleControl
+                                label="Open in New Tab?"
+                                help={
+                                    openNewTab
+                                        ? 'Opens link in a new tab.'
+                                        : 'Opens link in the same tab.'
+                                }
+                                checked={openNewTab}
+                                onChange={toggleNewTab}
+                            />
 						</fieldset>
 					</PanelRow>
 
@@ -162,13 +164,13 @@ const Edit = (props) => {
 
 				<div className="col-cti">
 					<div className="image-box">
-						<img
-							className="card-image"
-							src={mediaURL}
-							alt={__(
-								'Upload Card Image',
-								'ufl-block'
-							)} />
+						{mediaURL && (
+                            <img
+                                className="card-image"
+                                src={mediaURL}
+                                alt={mediaAlt || __('Upload Card Image', 'ufl-block')} 
+                            />
+                        )}
 
 					</div>
 					<RichText

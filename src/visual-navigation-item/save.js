@@ -6,7 +6,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
 	const {
-		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL },
+		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL, mediaAlt },
 	} = props;
 
 	const blockProps = useBlockProps.save();
@@ -17,7 +17,7 @@ const Save = (props) => {
 					<img
 						className="img-fluid visual-navigation-image"
 						src={mediaURL}
-						alt={title}
+						alt={mediaAlt}
 					/>
 					<div className="dh-overlay"></div>
 				</span>
@@ -30,6 +30,3 @@ const Save = (props) => {
 };
 
 export default Save;
-
-
-

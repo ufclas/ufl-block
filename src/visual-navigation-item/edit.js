@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL },
+		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL, mediaAlt},
 		setAttributes,
 	} = props;
 
@@ -41,13 +41,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt,
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: '',
 		});
 	}
 	const onLinkClick = (event) => {
@@ -139,7 +141,7 @@ const Edit = (props) => {
 					<img
 						className="img-fluid visual-navigation-image"
 						src={mediaURL}
-						alt={title}
+						alt={mediaAlt}
 					/>
 
 					<div className="dh-overlay"></div>
@@ -160,6 +162,3 @@ const Edit = (props) => {
 };
 
 export default Edit;
-
-
-

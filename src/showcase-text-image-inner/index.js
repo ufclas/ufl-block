@@ -19,8 +19,8 @@ import './style.scss';
  */
 import Edit from './edit';
 import save from './save';
-import deprecated from './deprecated';
 import metadata from './block.json';
+import deprecated from './deprecated';
 
 /**
  * Every block starts by registering a new block type definition.

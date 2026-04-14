@@ -5,7 +5,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 
- .fullwidth-media {
+.fullwidth-media {
   padding-left: 7%;
   padding-right: 7%;
   padding-top: 60px;
@@ -27,6 +27,9 @@
 
       &:hover,
       &:focus {
+        outline: 3px solid #1a73e8;
+        outline-offset: 4px;
+
         .video-thumb {
           border: 1px solid #fa4616;
         }
@@ -141,7 +144,7 @@
       }
     }
 
-    .video-play:hover + .video-thumb {
+    .video-play:hover+.video-thumb {
       border: 1px solid #fa4616;
     }
   }

@@ -18,6 +18,10 @@
     "sectionSubtitle": {
       "type": "string",
       "default": ""
+    },
+    "blackAndWhiteHoverToggle": {
+      "type": "boolean",
+      "default": false
     }
   },
   "textdomain": "visual-navigation",

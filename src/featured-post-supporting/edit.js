@@ -147,7 +147,7 @@ const Edit = (props) => {
 
 
 
-			<a className="hero-link" href={btnLink} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"} target={openNewTab ? "_blank" : "_self"} style={{ backgroundImage: "url(" + mediaURL + ")" }} onClick={onLinkClick}>
+			<a role="img" aria-hidden="true" className="hero-link" href={btnLink} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"} target={openNewTab ? "_blank" : "_self"} style={{ backgroundImage: "url(" + mediaURL + ")" }} onClick={onLinkClick}>
 			<div {...blockProps}>
 				<span className="hero-link-inner">
 					<RichText
@@ -162,7 +162,7 @@ const Edit = (props) => {
 					<RichText
 						tagName="p"
 						placeholder={__(
-							'Write title…',
+							'Write text…',
 							'gutenberg-examples'
 						)}
 						value={text}

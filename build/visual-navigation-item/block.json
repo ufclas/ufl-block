@@ -45,6 +45,10 @@
     "mediaURL": {
       "type": "string",
       "default": ""
+    },
+    "mediaAlt": {
+      "type": "string",
+      "default": ""
     }
   },
   "textdomain": "visual-navigation-item",

@@ -22,6 +22,10 @@
     "text": {
       "type": "string",
       "default": ""
+    },
+    "verticalAlign": {
+      "type": "boolean",
+      "default": false
     }
   },
   "textdomain": "tab-block",

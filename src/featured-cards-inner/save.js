@@ -6,25 +6,33 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
 	const {
-		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL },
+		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL, imgAltText },
 	} = props;
 
+    const wrapperProps = { className: 'featured-card slick-slide' };
+
+    if ( btnLink ) {
+        wrapperProps.href = btnLink;
+        wrapperProps.rel = hasLinkNofollow ? 'nofollow' : 'noopener noreferrer';
+        wrapperProps.target = openNewTab ? '_blank' : '_self';
+    }
+
 	const blockProps = useBlockProps.save();
+
+	const Wrapper = btnLink ? 'a' : 'div';
 	return (
 		<>
-
-
-			<a className="featured-card slick-slide" href={btnLink} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"} target={openNewTab ? "_blank" : "_self"}>
+			<Wrapper { ...wrapperProps }>
 			<div {...blockProps}>
 				<div className="featured-card-inner">
 					<div className="feat-card-parralax-wrapper position-relative">
-						<img src="/wp-content/plugins/ufl-block/assets/images/feat-card-bg.webp" className="animTop" />
+						<img src="/wp-content/plugins/ufl-block/assets/images/feat-card-bg.webp" className="animTop" alt="" />
 						<div className="image-box">
 							{mediaURL && (
 								<img
 									className="featured-card-image"
 									src={mediaURL}
-									alt={'Card Image'}
+									alt={imgAltText || ''} 
 								/>
 							)}
 
@@ -37,18 +45,17 @@ const Save = (props) => {
 					<div className="featured-card-text">
 						<RichText.Content value={text} />
 					</div>
-					<div className="animated-underline-button">{btnLabel}</div>
+					{btnLink && (
+                        <div className="animated-underline-button">{btnLabel}</div>
+                    )}
 				</div>
 				</div>
-			</a>
+			</Wrapper>
 
 		</>
-
-
 	);
 };
 
 export default Save;
-
 
 

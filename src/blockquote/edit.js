@@ -83,18 +83,17 @@ const Edit = (props) => {
 							<div className="col col-lg-12">
 								<div className="card">
 									<blockquote className="blockquote">
-										<span>
-											<span className="quote">
+											<div className="quote">
 												<InnerBlocks
 													allowedBlocks={ALLOWED_BLOCKS}
 													template={TEMPLATE}
 												/>
-											</span>
-											<span className="quotee"> —
+											</div>
+											<footer className="quotee"> —
 												<RichText
 													placeholder={__(
-														'Write title…',
-														'gutenberg-examples'
+														'Write name…',
+														'block-quote'
 													)}
 													value={name}
 													onChange={onChangeName}
@@ -103,13 +102,12 @@ const Edit = (props) => {
 												<RichText
 													placeholder={__(
 														'Write title…',
-														'gutenberg-examples'
+														'block-quote'
 													)}
 													value={title}
 													onChange={onChangeTitle}
 												/>
-											</span>
-										</span>
+											</footer>
 									</blockquote>
 								</div>
 							</div>
