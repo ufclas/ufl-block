@@ -44,6 +44,10 @@
 			"type": "number",
 			"default": ""
 		},
+		"mediaAlt": {
+			"type": "string",
+			"default": ""
+		},
 		"mediaURL": {
 			"type": "string",
 			"default": ""

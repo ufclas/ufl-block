@@ -4,7 +4,7 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
- .visual-navigation {
+.visual-navigation {
   padding-left: 7%;
   padding-right: 7%;
   padding-top: 55px;
@@ -98,4 +98,29 @@
   display: flex !important;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+// Modification for black and white hover option
+.visual-navigation.black-and-white-hover .dh-overlay:hover,
+.visual-navigation.black-and-white-hover .dh-overlay:focus {
+  filter: grayscale(1);
+  transition: filter 0.5s ease-in-out;
+}
+
+.visual-navigation.black-and-white-hover .visual-navigation-link:hover img,
+.visual-navigation.black-and-white-hover .visual-navigation-link:focus img {
+  filter: grayscale(1);
+  transition: filter 0.5s ease-in-out;
+}
+
+.visual-navigation.black-and-white-hover .dh-overlay {
+  background-color: rgba(22, 15, 15, 0.24);
+}
+
+.visual-navigation .dh-overlay.hovered {
+  transform: translateX(0%);
+}
+
+.visual-navigation:not(.black-and-white-hover) .dh-overlay {
+  background-color: #fa4616;
 }

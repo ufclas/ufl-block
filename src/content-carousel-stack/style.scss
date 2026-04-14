@@ -1,5 +1,5 @@
 .wp-block-create-block-content-carousel-stack {
-
+    margin: 3rem auto;
 .content-carousel—stack {
     margin: 0 auto;
     max-width: 1570px;
@@ -51,7 +51,6 @@
         padding-bottom: 15px;
         padding-right: 0;
         padding-left: 0;
-  
         width: 100%;
         z-index: 1;
         position: relative;
@@ -68,15 +67,17 @@
         }
   
         span {
-          font-weight: 600;
-          font-size: 1.5em;
+          font-weight: 500;
+          font-size: 25px;
           background: transparent;
           border-radius: 50%;
-          line-height: 35px;
-          width: 35px;
-          display: block;
+          line-height: 10px;
+          width: 50px;
+          display: inline;
           text-align: center;
-          color: white;
+          color: #000;
+          padding: 10px 0px;
+          border-color: #fa4616;
         }
   
         h2 {

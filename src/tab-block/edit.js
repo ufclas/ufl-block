@@ -12,7 +12,7 @@ import { useSelect } from '@wordpress/data';
 import { RawHTML, useState, useEffect, Component } from '@wordpress/element';
 const Edit = (props) => {
 	const {
-		attributes: { blockID, title, text },
+		attributes: { blockID, title, text, verticalAlign },
 		clientId,
 		setAttributes,
 	} = props;
@@ -38,6 +38,9 @@ const Edit = (props) => {
 		setAttributes({ text: value });
 	};
 
+	const toggleVerticalAlign = () => {
+		setAttributes({ verticalAlign: !verticalAlign })
+	}
 
 	return (
 
@@ -73,7 +76,20 @@ const Edit = (props) => {
 							/>
 						</fieldset>
 					</PanelRow>
-
+					<PanelRow>
+						<fieldset>
+							<ToggleControl
+								label="Vertically align tab content?"
+								help={
+									verticalAlign
+										? 'Is vertically aligned'
+										: 'Is not vertically aligned'
+								}
+								checked={verticalAlign}
+								onChange={toggleVerticalAlign}
+							/>
+						</fieldset>
+					</PanelRow>
 
 
 				</PanelBody>

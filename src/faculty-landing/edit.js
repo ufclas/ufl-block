@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { sectionTitle, lightToggle },
+		attributes: { sectionTitle, lightToggle, blackAndWhiteHoverToggle },
 		setAttributes,
 	} = props;
 
@@ -26,6 +26,10 @@ const Edit = (props) => {
 
 	const toggleLight = () => {
 		setAttributes({ lightToggle: !lightToggle })
+	}
+
+	const toggleBlackAndWhite = () => {
+		setAttributes({ blackAndWhiteHoverToggle: !blackAndWhiteHoverToggle })
 	}
 
 	return (
@@ -46,7 +50,15 @@ const Edit = (props) => {
 							/>
 						</fieldset>
 					</PanelRow>
-
+					<PanelRow>
+						<fieldset>
+							<ToggleControl
+								label="Black and White Hover"
+								checked={blackAndWhiteHoverToggle}
+								onChange={toggleBlackAndWhite}
+							/>
+						</fieldset>
+					</PanelRow>
 
 					<PanelRow>
 
@@ -73,7 +85,7 @@ const Edit = (props) => {
 
 
 			<div {...blockProps}>
-				<section className={`faculty-page ${lightToggle ? 'light' : ''}`}>
+				<section className={`faculty-page ${lightToggle ? 'light' : ''} ${blackAndWhiteHoverToggle ? 'black-and-white-hover' : ''}`}>
 					<div className="title-wrapper">
 						<RichText
 							tagName="h1"

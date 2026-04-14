@@ -198,3 +198,21 @@
 .block-editor-inner-blocks .faculty-listing-img {
   mix-blend-mode: unset !important;
 }
+
+// Modification for black and white hover option
+.faculty-listing-carousel-wrapper.black-and-white-hover .faculty-listing-item .faculty-listing-img:hover,
+.faculty-listing-carousel-wrapper.black-and-white-hover .faculty-listing-item .faculty-listing-img:focus {
+  filter: grayscale(1);
+  transition: filter 0.5s ease-in-out;
+}
+
+.faculty-listing-carousel-wrapper.black-and-white-hover .faculty-listing-item .faculty-listing-img::after {
+    background-color: rgba(22, 15, 15, 0.24);
+}
+.faculty-listing-carousel-wrapper .faculty-listing-item .faculty-listing-img.hovered::after {
+    transform: translateX(0%);
+}
+
+.faculty-listing-carousel-wrapper:not(.black-and-white-hover) .faculty-listing-item .faculty-listing-img::after {
+  background-color: #fa4616;
+}

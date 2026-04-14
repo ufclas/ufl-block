@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL },
+		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL, mediaAlt },
 		setAttributes,
 	} = props;
 
@@ -41,13 +41,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: ''
 		});
 	}
 
@@ -65,6 +67,7 @@ const Edit = (props) => {
 							<MediaUploadCheck>
 								<MediaUpload
 									onSelect={onSelectImage}
+									label={__('Upload Background Image', 'post-header')}
 									allowedTypes="image"
 									value={mediaID}
 									render={({ open }) => (
@@ -110,7 +113,7 @@ const Edit = (props) => {
 
 				{mediaURL ? (
 
-					<section className="single-news-hero w-100" style={{ backgroundImage: "url(" + mediaURL + ")" }} >
+					<section className="single-news-hero w-100" style={{ backgroundImage: "url(" + mediaURL + ")" }} role="img" aria-label={mediaAlt}>
 						<RichText
 							tagName="h1"
 							placeholder={__(
@@ -124,7 +127,7 @@ const Edit = (props) => {
 
 				) : (
 
-					<section className="title-block w-100">
+					<section className="title-block w-100" aria-label={__('Post Header', 'post-header')}>
 						<div className="container-fluid news-title-container">
 							<div className="title-wrapper">
 								<RichText

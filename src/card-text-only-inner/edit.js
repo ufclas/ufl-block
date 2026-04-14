@@ -78,7 +78,7 @@ const Edit = (props) => {
 								label={__('Card Destination', 'card-text-only-inner')}
 								value={slideLink}
 								onChange={onChangeLink}
-								help={__('', 'card-text-only-inner')}
+								help={__('Optional', 'card-text-only-inner')}
 							/>
 						</fieldset>
 					</PanelRow>
@@ -101,34 +101,57 @@ const Edit = (props) => {
 			</InspectorControls>
 
 
-
-			<a href={slideLink}
-				rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
-				target={openNewTab ? "_blank" : "_self"}
-				className="button card slick-slide"
-				onClick={onLinkClick} >
-				<span className="cta-title">
-					<RichText
-						placeholder={__(
-							'Write title…',
-							'gutenberg-examples'
-						)}
-						value={title}
-						onChange={onChangeTitle}
-					/>
-				</span>
-				<span className="cta-text">
-					<RichText
-						placeholder={__(
-							'Write text',
-							'gutenberg-examples'
-						)}
-						value={subText}
-						onChange={onChangeSubText}
-					/>
-				</span>
-			</a>
-
+			{slideLink ? (
+				<a href={slideLink}
+				   rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
+				   target={openNewTab ? "_blank" : "_self"}
+				   className="button card slick-slide"
+				   onClick={onLinkClick}>
+					<span className="cta-title">
+						<RichText
+							placeholder={__(
+								'Write title…',
+								'gutenberg-examples'
+							)}
+							value={title}
+							onChange={onChangeTitle}
+						/>
+					</span>
+					<span className="cta-text">
+						<RichText
+							placeholder={__(
+								'Write text…',
+								'gutenberg-examples'
+							)}
+							value={subText}
+							onChange={onChangeSubText}
+						/>
+					</span>
+				</a>
+			  ) : (
+				<div className="button card slick-slide">
+					<span className="cta-title">
+						<RichText
+							placeholder={__(
+								'Write title…',
+								'gutenberg-examples'
+							)}
+							value={title}
+							onChange={onChangeTitle}
+						/>
+					</span>
+					<span className="cta-text">
+						<RichText
+							placeholder={__(
+								'Write text…',
+								'gutenberg-examples'
+							)}
+							value={subText}
+							onChange={onChangeSubText}
+						/>
+					</span>
+				</div> 	
+			)} 					
 
 		</>
 	);

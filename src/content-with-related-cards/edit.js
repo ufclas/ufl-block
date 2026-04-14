@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { title, subTitle, content, linktext, link, hasLinkNofollow, openNewTab, mediaID, mediaURL, },
+		attributes: { title, subTitle, content, linktext, link, hasLinkNofollow, openNewTab, mediaID, mediaAlt, mediaURL, },
 		setAttributes,
 	} = props;
 
@@ -51,13 +51,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt,
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: ''
 		});
 	}
 
@@ -162,8 +164,7 @@ const Edit = (props) => {
 						className="figure-img img-fluid"
 						src={mediaURL}
 						alt={__(
-							'Upload Post Image',
-							'ufl-block'
+							mediaAlt
 						)} />
 				</span>
 				<p className="excerpt">{title}</p>

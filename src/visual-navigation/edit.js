@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { sectionTitle, sectionSubtitle },
+		attributes: { sectionTitle, sectionSubtitle, blackAndWhiteHoverToggle },
 		setAttributes,
 	} = props;
 
@@ -26,6 +26,9 @@ const Edit = (props) => {
 		setAttributes({ sectionSubtitle: newContent })
 	}
 
+	const toggleBlackAndWhite = () => {
+		setAttributes({ blackAndWhiteHoverToggle: !blackAndWhiteHoverToggle })
+	}
 	return (
 		<>
 
@@ -59,6 +62,16 @@ const Edit = (props) => {
 						</fieldset>
 					</PanelRow>
 
+					<PanelRow>
+						<fieldset>
+							<ToggleControl
+								label="Black and White Hover"
+								checked={blackAndWhiteHoverToggle}
+								onChange={toggleBlackAndWhite}
+							/>
+						</fieldset>
+					</PanelRow>
+					
 				</PanelBody>
 			</InspectorControls>
 

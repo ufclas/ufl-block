@@ -40,12 +40,16 @@
 		},
 		"mediaID": {
 			"type": "number",
-			"default": ""
+			"default": 0
 		},
 		"mediaURL": {
 			"type": "string",
 			"default": ""
-		}
+		},
+		"mediaAlt": {
+            "type": "string",
+            "default": ""
+        }
 	},
 	"textdomain": "content-carousel-inner-block",
 	"editorScript": "file:./index.js",

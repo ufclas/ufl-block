@@ -15,7 +15,7 @@ import { RawHTML, useState, useEffect, Component } from '@wordpress/element';
 
 const Edit = (props) => {
 	const {
-		attributes: { title, content, blockID, modalTarget, mediaID, mediaURL },
+		attributes: { title, content, blockID, modalTarget, mediaID, mediaURL, mediaAlt },
 		clientId,
 		setAttributes,
 	} = props;
@@ -48,12 +48,14 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt,
 		});
 	};
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: '',
 		});
 	}
 
@@ -132,7 +134,7 @@ const Edit = (props) => {
 			</InspectorControls>
 
 			<div className="col-6 col-md-3 col-image-gallery" style={{ backgroundImage: "url(" + mediaURL + ")" }}>
-				<a href="#" data-bs-toggle="modal" data-bs-target={'#modal' + blockID} aria-label="modal about [insert subject]" onClick={onLinkClick}></a>
+				<a href="#" data-bs-toggle="modal" data-bs-target={'#modal' + blockID} aria-label={'modal about '+mediaAlt} onClick={onLinkClick}></a>
 			</div>
 
 			<div className="modal fade img-gallery-modal" id={'modal' + blockID} aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-bs-backdrop="static">
@@ -157,7 +159,7 @@ const Edit = (props) => {
 									/>
 								</div>
 								<div className="col-12 col-md-6">
-									<img className="img-fluid" src={mediaURL} />
+									<img className="img-fluid" src={mediaURL} alt={mediaAlt} />
 								</div>
 							</div>
 						</div>

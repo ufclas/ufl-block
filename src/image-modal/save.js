@@ -6,7 +6,7 @@ import { RichText, useBlockProps, useInnerBlocksProps, InnerBlocks } from '@word
 
 const Save = ( props ) => {
 	const {
-		attributes: { title, content, blockID, modalTarget, mediaID, mediaURL  },
+		attributes: { title, content, blockID, modalTarget, mediaID, mediaURL, mediaAlt },
 	} = props;
 
 	const blockProps = useBlockProps.save();
@@ -16,7 +16,7 @@ const Save = ( props ) => {
 <>
 
 <div className="col-6 col-md-3 col-image-gallery" style={{backgroundImage: "url(" + mediaURL + ")"}}>
-	<a href="#" data-bs-toggle="modal" data-bs-target={'#modal'+blockID} aria-label="modal about [insert subject]"></a>
+	<a href="#" data-bs-toggle="modal" data-bs-target={'#modal'+blockID} aria-label={'modal about '+mediaAlt}></a>
 </div>
 
 
@@ -36,7 +36,7 @@ const Save = ( props ) => {
 					</div>
 					<div className="col-12 col-md-6">
 					{ mediaURL && (
-						<img className="img-fluid" src={mediaURL} />
+						<img className="img-fluid" src={mediaURL} alt={mediaAlt} />
 						)}
 						
 					</div> 

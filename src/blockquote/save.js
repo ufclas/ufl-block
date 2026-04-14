@@ -13,21 +13,21 @@ const Save = (props) => {
   return (
     <>
       <div {...blockProps}>
-        <section className="blockquote-section w-100 position-relative">
+        <section className="blockquote-section w-100 position-relative"  aria-label={__('Quote', 'post-header')}>
           <div className="container-fluid">
             <div className="row d-flex justify-content-center align-items-center">
               <div className="col col-lg-12">
                 <div className="card">
                   <blockquote className="blockquote">
-                    <span>
-                      <span className="quote">
+                      <div className="quote">
                         <InnerBlocks.Content />
-                      </span>
-                      <span className="quotee"> 
-                        {name && `- ${name}`}
-                        {title && `, ${title}`}
-                      </span>
-                    </span>
+                      </div>
+                      {(name || title) && (
+                      <footer className="quotee"> 
+                        {name && name}
+                        {title && <cite>, {title}</cite>}
+                      </footer>
+                       )}
                   </blockquote>
                 </div>
               </div>

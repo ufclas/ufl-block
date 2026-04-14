@@ -6,10 +6,11 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
   const {
-    attributes: { blockID, title, text },
+    attributes: { blockID, title, text, verticalAlign },
   } = props;
 
   const blockProps = useBlockProps.save();
+  const wrapperClass = `tab-block-wrapper${verticalAlign ? ' align-items-center' : ''}`;
   return (
 
 
@@ -29,7 +30,7 @@ const Save = (props) => {
              
             </div>
           </div>
-          <div className="tab-block-wrapper">
+          <div className={wrapperClass}>
             <div className="desktop-tab-link-col">
               <div className="nav flex-column" id="tab-block" role="tablist">
               </div>

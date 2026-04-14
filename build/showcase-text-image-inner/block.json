@@ -80,6 +80,10 @@
       "type": "string",
       "default": "/wp-content/plugins/ufl-block/assets/images/showcase-image-ph.jpg"
     },
+    "mediaAlt": {
+      "type": "string",
+      "default": ""
+    },
     "mediaSide": {
       "type": "boolean",
       "default": false

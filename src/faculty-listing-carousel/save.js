@@ -6,13 +6,15 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
 	const {
-		attributes: { sectionTitle },
+		attributes: { sectionTitle, blackAndWhiteHoverToggle },
 	} = props;
 
 	const blockProps = useBlockProps.save();
+	const blackAndWhiteClass = blackAndWhiteHoverToggle ? 'black-and-white-hover' : '';
+
 	return (
 		<div {...blockProps}>
-			<section className="faculty-listing-carousel-wrapper">
+			<section className={`faculty-listing-carousel-wrapper` + ' ' + blackAndWhiteClass}>
 				<RichText.Content tagName="h2" className="text-center text-white" value={sectionTitle} />
 				<div className="faculty-listing-carousel">
 					<InnerBlocks.Content />

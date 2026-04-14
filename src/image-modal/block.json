@@ -37,6 +37,10 @@
 		"mediaURL": {
 			"type": "string",
 			"default": "/wp-content/plugins/ufl-block/assets/images/modal-image-ph.webp"
+		},
+		"mediaAlt": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"textdomain": "image-modal",

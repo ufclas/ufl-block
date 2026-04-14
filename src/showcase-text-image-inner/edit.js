@@ -12,7 +12,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { title, subTitle, mediaID, mediaSide, mediaURL, 
+		attributes: { title, subTitle, mediaID, mediaSide, mediaURL, mediaAlt,
 			link, linkLabel, hasLinkNofollow, openNewTab, 
 			link2, linkLabel2, hasLinkNofollow2, openNewTab2, 
 			link3, linkLabel3, hasLinkNofollow3, openNewTab3, 
@@ -82,13 +82,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt,
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: '',
 		});
 	}
 
@@ -358,7 +360,11 @@ const Edit = (props) => {
 									</span>
 								</div>
 							</div>
-							<div className="col-image" style={{ backgroundImage: "url(" + mediaURL + ")" }}></div>
+							<div
+								className="col-image"
+								style={{ backgroundImage: "url(" + mediaURL + ")" }}
+								aria-label={ mediaAlt }
+							></div>
 						</div>
 					</div>
 				</section>

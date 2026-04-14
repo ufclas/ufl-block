@@ -95,7 +95,7 @@ const Edit = (props) => {
 											<span className="quotee text-white"> —
 												<RichText
 													placeholder={__(
-														'Write title…',
+														'Write name…',
 														'gutenberg-examples'
 													)}
 													value={name}

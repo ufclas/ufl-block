@@ -10,21 +10,33 @@ const Save = (props) => {
 	} = props;
 
 	const blockProps = useBlockProps.save();
+
+	const content = (
+		<>
+			<span className="cta-title">
+				<RichText.Content value={title} />
+			</span>
+			<span className="cta-text">
+				<RichText.Content value={subText} />
+			</span>
+		</>
+	);
 	return (
 		<>
+			{slideLink ? (
+				<a href={slideLink}
+					rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
+					target={openNewTab ? "_blank" : "_self"}
+					className="button card slick-slide">
+					{content}
+				</a>
+			) : (
+				<div className='button card slick-slide'>
+					{content}
+				</div>
+			)}
 
-
-			<a href={slideLink}
-				rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
-				target={openNewTab ? "_blank" : "_self"}
-				className="button card slick-slide">
-				<span className="cta-title">
-					<RichText.Content value={title} />
-				</span>
-				<span className="cta-text">
-					<RichText.Content value={subText} />
-				</span>
-			</a>
+		
 
 		</>
 

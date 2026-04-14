@@ -22,6 +22,10 @@
 		"mediaURL": {
 			"type": "string",
 			"default": ""
+		},
+		"mediaAlt": {
+			 "type": "string", 
+			 "default": "" 
 		}
 	},
 	"textdomain": "post-header",

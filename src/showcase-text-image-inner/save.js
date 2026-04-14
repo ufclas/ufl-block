@@ -6,7 +6,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
   const {
-    attributes: { title, subTitle, mediaID, mediaSide, mediaURL, 
+    attributes: { title, subTitle, mediaID, mediaSide, mediaURL, mediaAlt,
       link, linkLabel, hasLinkNofollow, openNewTab, 
       link2, linkLabel2, hasLinkNofollow2, openNewTab2,
       link3, linkLabel3, hasLinkNofollow3, openNewTab3, 
@@ -62,7 +62,11 @@ const Save = (props) => {
                     </span>
                   </div>
                 </div>
-                <div className="col-image" style={{ backgroundImage: "url(" + mediaURL + ")" }}></div>
+                <div
+                  className="col-image"
+                  style={{ backgroundImage: "url(" + mediaURL + ")" }}
+                  aria-label={ mediaAlt }
+                ></div>
               </div>
             </div>
           </section>
@@ -74,7 +78,7 @@ const Save = (props) => {
           <section className="showcase-text-image">
             <div className="container-fluid px-0">
               <div className="row no-gutters text-image-row text-row-right bg-white">
-                <div className="col-image" style={{ backgroundImage: "url(" + mediaURL + ")" }}></div>
+                <div className="col-image" style={{ backgroundImage: "url(" + mediaURL + ")" }} aria-label={mediaAlt} role='img'></div>
                 <div className="col-text">
                   <div className="col-text-inner">
                     <RichText.Content tagName="h2" value={title} />

@@ -36,11 +36,11 @@
 			"type": "boolean",
 			"default": false
 		},
-		"mediaID": {
-			"type": "number",
+		"mediaURL": {
+			"type": "string",
 			"default": ""
 		},
-		"mediaURL": {
+		"imgAltText": {
 			"type": "string",
 			"default": ""
 		}
@@ -48,5 +48,21 @@
 	"textdomain": "featured-cards-inner",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"deprecations": [
+        {
+            "attributes": {
+                "text": { "type": "string" },
+                "title": { "type": "string" },
+                "btnLabel": { "type": "string" },
+                "btnLink": { "type": "string" },
+                "hasLinkNofollow": { "type": "boolean" },
+                "openNewTab": { "type": "boolean" },
+                "mediaURL": { "type": "string" },
+                "mediaID": { "type": "number" },
+				"imgAltText": { "type": "string" }
+            },
+            "save": "./deprecated.js"
+        }
+    ]
 }

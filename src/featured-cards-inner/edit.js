@@ -11,7 +11,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL },
+		attributes: { text, title, btnLabel, btnLink, hasLinkNofollow, openNewTab, mediaID, mediaURL, imgAltText },
 		setAttributes,
 	} = props;
 
@@ -45,12 +45,14 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			imgAltText: media.alt || '',
 		});
 	};
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			imgAltText: ''
 		});
 	}
 	const onLinkClick = (event) => {
@@ -100,6 +102,16 @@ const Edit = (props) => {
 					<PanelRow>
 						<fieldset>
 							<TextControl
+							label={__('Image Alt Text', 'featured-cards-inner')}
+							value={imgAltText}  
+							onChange={(value) => setAttributes({ imgAltText: value })}
+							help={__('Describe the image for screen readers', 'featured-cards-inner')}
+							/>
+						</fieldset>
+					</PanelRow>
+					<PanelRow>
+						<fieldset>
+							<TextControl
 								label={__('Card Title', 'featured-cards-inner')}
 								value={title}
 								onChange={onChangeTitle}
@@ -131,7 +143,7 @@ const Edit = (props) => {
 					<PanelRow>
 						<fieldset>
 							<TextControl
-								label={__('Card Button Destnation', 'featured-cards-inner')}
+								label={__('Card Button Destination', 'featured-cards-inner')}
 								value={btnLink}
 								onChange={onChangebtnLink}
 								help={__('', 'featured-cards-inner')}
@@ -157,20 +169,17 @@ const Edit = (props) => {
 			</InspectorControls>
 
 
-
-
-
 			<a className="featured-card slick-slide" href={btnLink} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"} target={openNewTab ? "_blank" : "_self"}  onClick={onLinkClick}>
 			<div {...blockProps}>
 				<div className="featured-card-inner">
 
 					<div className="feat-card-parralax-wrapper position-relative">
-						<img src="/wp-content/plugins/ufl-block/assets/images/feat-card-bg.webp" className="animTop" />
+						<img src="/wp-content/plugins/ufl-block/assets/images/feat-card-bg.webp" className="animTop" alt="" />
 						<div className="image-box">
 							<img
 								className="featured-card-image"
 								src={mediaURL}
-								alt={'Card Image'}
+								alt={imgAltText} 
 							/>
 						</div>
 					</div>
@@ -189,7 +198,7 @@ const Edit = (props) => {
 						<RichText
 							tagName="p"
 							placeholder={__(
-								'Write title…',
+								'Write text…',
 								'gutenberg-examples'
 							)}
 							value={text}

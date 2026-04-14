@@ -15,7 +15,7 @@ const Save = (props) => {
 
 
 
-			<a className="news-hero-featured" href={btnLink} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"} target={openNewTab ? "_blank" : "_self"} style={{ backgroundImage: "url(" + mediaURL + ")" }}>
+			<a role="img" aria-hidden="true" className="news-hero-featured" href={btnLink} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"} target={openNewTab ? "_blank" : "_self"} style={{ backgroundImage: "url(" + mediaURL + ")" }}>
 			<div {...blockProps}>
 				<span className="featured-hero-link">
 					<span className="featured-hero-link-inner">
