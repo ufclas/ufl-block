@@ -10,6 +10,8 @@ import json from './block.json';
 import Edit from './edit';
 import save from './save';
 import './style.scss';
+import deprecated from './deprecated.js';
+
 
 // Destructure the json file to get the name and settings for the block
 // For more information on how this works, see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -19,4 +21,5 @@ const { name } = json;
 registerBlockType( name, {
 	edit: Edit,
 	save, // Object shorthand property - same as writing: save: save,
+	deprecated: deprecated
 } );

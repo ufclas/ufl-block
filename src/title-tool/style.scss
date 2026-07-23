@@ -45,11 +45,11 @@
 	  }
   
 	  &:after {
-		background: linear-gradient(
+		/*background: linear-gradient(
 		  180deg,
 		  rgba(0, 0, 0, 0.5) 0%,
 		  rgba(0, 0, 0, 0) 100%
-		);
+		);*/
 		top: 0;
 		content: "";
 		z-index: 99;
@@ -105,7 +105,7 @@
 
         @media (min-width: 767px) {
           color: #fff;
-          margin: 40px auto 85px;
+          margin: 40px auto 40px;
           font-size: 24px;
           line-height: 30px;
         }
@@ -211,7 +211,192 @@
 	}
   }
 
+	/* 
+	.title-tool-block .title-tool-block-inner .title-tool-title {
+		background: rgba(0, 0, 0, 0.42);
+		border: 1px solid rgba(255, 255, 255, 0.04);
+		backdrop-filter: blur(9px);
+		margin-bottom: 48px;
+	}
 
+	@media (min-width: 767px) {
+		.title-tool-block .title-tool-block-inner .title-tool-title {
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+		}
+		.title-tool-block .title-tool-block-inner .title-tool-title h1, .title-tool-block .title-tool-block-inner .title-tool-title .h1 {
+			color: #fff;
+			text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
+			padding-top: 40px;
+		}
+	}*/
+    
+	.title-tool-block {
+	position: relative;
+	overflow: hidden; }
+	.title-tool-block .title-tool-block-bg {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 300px; }
+		@media (min-width: 767px) {
+		.title-tool-block .title-tool-block-bg {
+			position: absolute;
+			width: 100%;
+			animation: move 40s ease;
+			/* Add infinite to loop. */
+			-ms-animation: move 40s ease;
+			-webkit-animation: move 40s ease;
+			-moz-animation: move 40s ease;
+			transform: scale(1);
+			-ms-transform: scale(1);
+			/* IE 9 */
+			-webkit-transform: scale(1);
+			/* Safari and Chrome */
+			-o-transform: scale(1);
+			/* Opera */
+			-moz-transform: scale(1);
+			/* Firefox */ } }
+		/*Code below is commented out in order to replace the gradient backdrop with the semi-transparant backdrop behind the text area */  
+	/* .title-tool-block .title-tool-block-bg:after {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+		top: 0;
+		content: "";
+		z-index: 99;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0; }
+		*/
+	.title-tool-block .title-tool-block-inner {
+		position: relative;
+		z-index: 999; }
+		@media (min-width: 767px) {
+		.title-tool-block .title-tool-block-inner {
+			padding: 100px 7% 60px;
+			text-align: center; } }
+		.title-tool-block .title-tool-block-inner .title-tool-title {
+			background: rgba(0, 0, 0, 0.42);
+			border: 1px solid rgba(255, 255, 255, 0.04);
+			backdrop-filter: blur(9px);
+			margin-bottom: 48px; }
+			@media (min-width: 767px) {
+			.title-tool-block .title-tool-block-inner .title-tool-title {
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.12); }	}
+		.title-tool-block .title-tool-block-inner .title-tool-title h1, .title-tool-block .title-tool-block-inner .title-tool-title .h1 {
+		margin: auto;
+		font-size: 48px;
+		line-height: 54px;
+		font-family: var(--medium-weight-sans), Arial, sans-serif;
+		letter-spacing: 0.14em;
+		text-align: center;
+		padding-top: 30px;
+		max-width: 95% }
+		@media (min-width: 767px) {
+			.title-tool-block .title-tool-block-inner .title-tool-title h1, .title-tool-block .title-tool-block-inner .title-tool-title .h1 {
+			color: #fff;
+			text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
+			padding-top: 40px; } }
+		/*.title-tool-block .title-tool-block-inner .title-tool-title hr {
+		max-width: 682px;
+		border-top: #fa4616 2px solid;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		opacity: 1;
+		margin-left: auto;
+		margin-right: auto; }*/
+		.title-tool-title h1::after {
+			content:"";    
+			max-width: 682px;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			opacity: 1;
+			margin-left: auto;
+			margin-right: auto;
+			border-top: 2px solid rgb(250, 70, 22);
+			display:block;
+		}
+
+		@media (max-width: 1000px) {
+			.title-tool-block .title-tool-block-inner .title-tool-title hr {
+			width: 75vw; } }
+		.title-tool-block .title-tool-block-inner .title-tool-title p {
+		margin: auto;
+		font-size: 24px;
+		line-height: 30px;
+		font-family: var(--book-weight-sans);
+		max-width: 75%; }
+		@media (min-width: 767px) {
+			.title-tool-block .title-tool-block-inner .title-tool-title p {
+			color: #fff;
+			margin: 40px auto 40px; } }
+		@media (max-width: 766px) {
+		.title-tool-block .title-tool-block-inner .title-tool-title {
+			padding: 0 7% 0;
+			background-color: #fff; } }
+		.title-tool-block .title-tool-block-inner .tool-link-wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		min-height: 1em;
+		position: relative;
+		background-color: #fff; }
+		@media (min-width: 767px) {
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper {
+			flex-direction: row;
+			background-color: transparent;
+			gap: 10px;
+			max-width: 1304px;
+			margin-left: auto;
+			margin-right: auto; } }
+		.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link {
+			-webkit-flex: 1 1 0;
+			flex: 0 1 0;
+			position: relative;
+			border: 3px solid rgba(255, 255, 255, 0.85);
+			background-color: rgba(255, 255, 255, 0.85);
+			padding: 30px 3.5%;
+			display: flex;
+			text-decoration: none;
+			min-width: 205px;
+			width: 100%;
+			gap: 20px;
+			align-items: center; }
+			@media (min-width: 767px) {
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link {
+				max-width: 285px;
+				padding: 15px;
+				flex-direction: column;
+				text-align: center;
+				gap: 0; } }
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link:hover, .title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link:focus {
+			border: 3px solid #fa4616;
+			background-color: white; }
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link .figure {
+			margin-bottom: 30px; }
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link .figure .figure-img {
+				height: 90px;
+				width: 90px;
+				object-fit: contain; }
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link h2, .title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link .h2 {
+			font-family: var(--semi-bold-sans);
+			font-size: 24px;
+			line-height: 28px;
+			font-weight: 700;
+			margin-bottom: 20px; }
+			.title-tool-block .title-tool-block-inner .tool-link-wrapper .tool-link p {
+			line-height: 22px;
+			font-weight: 600; }
+			@media (prefers-reduced-motion: reduce) {
+			.title-tool-block .title-tool-block-bg {
+			animation: none;
+			}}
+		.title-tool-block-bg.no-animate {
+			animation: none;
+		}
 
   @keyframes move {
 	0% {
@@ -262,7 +447,7 @@
 }
 
 .editor-styles-wrapper .title-tool-bg:after {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);*/
     top: 0;
     content: "";
     z-index: 99;

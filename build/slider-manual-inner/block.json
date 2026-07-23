@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "create-block/slider-manual-inner",
   "parent": [
     "create-block/slider-manual"
   ],
-  "version": "0.1.0",
+  "version": "0.1.2",
   "title": "Manual - Slider Inner Block",
   "category": "theme",
   "icon": "index-card",
@@ -51,10 +51,59 @@
     "mediaSide": {
       "type": "boolean",
       "default": false
+    },
+    "imgAltText": {
+      "type": "string",
+      "default": ""
     }
   },
   "textdomain": "slider-manual-inner",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "style": "file:./style-index.css",
+  "deprecations": [
+    {
+      "attributes": {
+        "title": {
+          "type": "string",
+          "selector": "p",
+          "default": "Title"
+        },
+        "subTitle": {
+          "type": "string",
+          "selector": "p",
+          "default": "Text"
+        },
+        "link": {
+          "type": "string",
+          "default": ""
+        },
+        "linkLabel": {
+          "type": "string",
+          "default": "Link Text"
+        },
+        "hasLinkNofollow": {
+          "type": "boolean",
+          "default": false
+        },
+        "openNewTab": {
+          "type": "boolean",
+          "default": false
+        },
+        "mediaID": {
+          "type": "number",
+          "default": ""
+        },
+        "mediaURL": {
+          "type": "string",
+          "default": "/wp-content/plugins/ufl-block/assets/images/showcase-image-ph.jpg"
+        },
+        "mediaSide": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "save": "./deprecated.js"
+    }
+  ]
 }

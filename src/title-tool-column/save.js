@@ -6,7 +6,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const Save = (props) => {
 	const {
-		attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab },
+		attributes: { title, subTitle, mediaID, mediaURL, mediaAlt, link, linkLabel, hasLinkNofollow, openNewTab },
 	} = props;
 
 	const blockProps = useBlockProps.save();
@@ -17,7 +17,7 @@ const Save = (props) => {
 
 				{mediaURL && (
 					<figure className="figure">
-						<img src={mediaURL} className="figure-img img-fluid" alt={title} />
+						<img src={mediaURL} className="figure-img img-fluid" alt={mediaAlt} />
 					</figure>
 				)}
 

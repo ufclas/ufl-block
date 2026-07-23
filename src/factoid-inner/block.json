@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "create-block/factoid-inner",
 	"parent": [ "create-block/factoids" ],
 	"version": "0.1.0",

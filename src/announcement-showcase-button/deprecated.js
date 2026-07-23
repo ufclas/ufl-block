@@ -7,10 +7,22 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 const deprecated = [
     {
         attributes: {
-            "buttonLabel": { "type": "string" },
-            "buttonLink": { "type": "string" },
-            "hasLinkNofollow": { "type": "boolean" },
-            "openNewTab": { "type": "boolean" },
+            "buttonLabel": { 
+                "type": "string",
+			    "default": "Link"
+            },
+            "buttonLink": { 
+                "type": "string",
+		        "default": ""
+            },
+            "hasLinkNofollow": { 
+                "type": "boolean",
+		        "default": false
+            },
+            "openNewTab": { 
+                "type": "boolean",
+			    "default": false
+            }
         },
 
         save: (props) => {

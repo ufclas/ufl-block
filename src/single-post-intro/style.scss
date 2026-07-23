@@ -77,3 +77,7 @@
       opacity: 1;
     }
   }
+#content .st-btn:focus {
+  outline: 2px solid black;
+  border-radius: 2px;
+}

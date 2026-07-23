@@ -84,15 +84,15 @@ const Edit = (props) => {
 						<div className="row d-flex justify-content-center align-items-center">
 							<div className="col col-lg-12">
 								<div className="card">
-									<blockquote className="blockquote text-white">
+									<blockquote className="blockquote">
 										<span>
-											<span className="quote text-white">
+											<span className="quote">
 												<InnerBlocks
 													allowedBlocks={ALLOWED_BLOCKS}
 													template={TEMPLATE}
 												/>
 											</span>
-											<span className="quotee text-white"> —
+											<span className="quotee"> —
 												<RichText
 													placeholder={__(
 														'Write name…',
