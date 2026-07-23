@@ -207,6 +207,39 @@
 	  }
 	}
 	
+	@media (min-width: 901px) {
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within h1:after {
+			opacity: 0;
+		}
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within .hero__excerpt {
+			opacity: 1 !important;
+			visibility: visible !important;
+			height: auto !important;
+		}
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within .banner_title {
+			padding-bottom: 100px !important;
+		}
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within .button {
+			opacity: 1 !important;
+			top: 0 !important;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within .hero-excerpt-btn-wrapper {
+			max-height: 600px;
+		}
+
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within .hero__excerpt {
+			opacity: 1 !important;
+			visibility: visible !important;
+		}
+
+		.wp-block-create-block-hero-block .hero-wrapper .hero__text:focus-within .button {
+			opacity: 1 !important;
+		}
+	}
+
 	@media (max-width: 900px) {
 	  .hero-object-wrapper,
 	  .hero-wrapper .hero__text:before {

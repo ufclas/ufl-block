@@ -12,7 +12,7 @@ import {
 
 const Edit = (props) => {
 	const {
-		attributes: { title, subTitle, mediaID, mediaURL, link, linkLabel, hasLinkNofollow, openNewTab },
+		attributes: { title, subTitle, mediaID, mediaURL, mediaAlt, link, linkLabel, hasLinkNofollow, openNewTab },
 		setAttributes,
 	} = props;
 
@@ -46,13 +46,15 @@ const Edit = (props) => {
 		setAttributes({
 			mediaURL: media.url,
 			mediaID: media.id,
+			mediaAlt: media.alt,
 		});
 	};
 
 	const removeMedia = () => {
 		props.setAttributes({
 			mediaID: 0,
-			mediaURL: ''
+			mediaURL: '',
+			mediaAlt: ''
 		});
 	}
 	const onLinkClick = (event) => {
@@ -158,7 +160,7 @@ const Edit = (props) => {
 			<a className="tool-link" href={link} rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
 				target={openNewTab ? "_blank" : "_self"} onClick={onLinkClick}>
 				<figure className="figure">
-					<img src={mediaURL} className="figure-img img-fluid" alt={title} />
+					<img src={mediaURL} className="figure-img img-fluid" alt={mediaAlt} />
 				</figure>
 				<span>
 					<RichText
